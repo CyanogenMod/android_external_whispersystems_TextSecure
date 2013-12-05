@@ -2,9 +2,9 @@ package org.whispersystems.textsecure.push;
 
 import android.content.Context;
 import android.util.Log;
-import android.util.Pair;
 
 import com.google.thoughtcrimegson.Gson;
+import com.google.thoughtcrimegson.JsonParseException;
 
 import org.apache.http.conn.ssl.StrictHostnameVerifier;
 import org.whispersystems.textsecure.crypto.IdentityKey;
@@ -149,31 +149,35 @@ public class PushServiceSocket {
   }
 
   public PreKeyEntity getPreKey(PushDestination destination) throws IOException {
-    String path = String.format(PREKEY_PATH, destination.getNumber());
+    try {
+      String path = String.format(PREKEY_PATH, destination.getNumber());
 
-    if (!Util.isEmpty(destination.getRelay())) {
-      path = path + "?relay=" + destination.getRelay();
+      if (!Util.isEmpty(destination.getRelay())) {
+        path = path + "?relay=" + destination.getRelay();
+      }
+
+      String responseText = makeRequest(path, "GET", null);
+      Log.w("PushServiceSocket", "Got prekey: " + responseText);
+      return PreKeyEntity.fromJson(responseText);
+    } catch (JsonParseException e) {
+      Log.w("PushServiceSocket", e);
+      throw new IOException("Bad prekey");
     }
-
-    String responseText = makeRequest(path, "GET", null);
-    Log.w("PushServiceSocket", "Got prekey: " + responseText);
-    return PreKeyEntity.fromJson(responseText);
   }
 
   public long sendAttachment(PushAttachmentData attachment) throws IOException {
-    Pair<String, String> response = makeRequestForResponseHeader(String.format(ATTACHMENT_PATH, ""),
-                                                                 "GET", null, "Content-Location");
+    String               response      = makeRequest(String.format(ATTACHMENT_PATH, ""), "GET", null);
+    AttachmentDescriptor attachmentKey = new Gson().fromJson(response, AttachmentDescriptor.class);
 
-    String contentLocation = response.first;
-    Log.w("PushServiceSocket", "Got attachment content location: " + contentLocation);
-
-    if (contentLocation == null) {
+    if (attachmentKey == null || attachmentKey.getLocation() == null) {
       throw new IOException("Server failed to allocate an attachment key!");
     }
 
-    uploadExternalFile("PUT", contentLocation, attachment.getData());
+    Log.w("PushServiceSocket", "Got attachment content location: " + attachmentKey.getLocation());
 
-    return new Gson().fromJson(response.second, AttachmentKey.class).getId();
+    uploadExternalFile("PUT", attachmentKey.getLocation(), attachment.getData());
+
+    return attachmentKey.getId();
   }
 
   public File retrieveAttachment(String relay, long attachmentId) throws IOException {
@@ -183,14 +187,15 @@ public class PushServiceSocket {
       path = path + "?relay=" + relay;
     }
 
-    Pair<String, String> response = makeRequestForResponseHeader(path, "GET", null, "Content-Location");
+    String               response   = makeRequest(path, "GET", null);
+    AttachmentDescriptor descriptor = new Gson().fromJson(response, AttachmentDescriptor.class);
 
-    Log.w("PushServiceSocket", "Attachment: " + attachmentId + " is at: " + response.first);
+    Log.w("PushServiceSocket", "Attachment: " + attachmentId + " is at: " + descriptor.getLocation());
 
     File attachment = File.createTempFile("attachment", ".tmp", context.getFilesDir());
     attachment.deleteOnExit();
 
-    downloadExternalFile(response.first, attachment);
+    downloadExternalFile(descriptor.getLocation(), attachment);
 
     return attachment;
   }
@@ -270,18 +275,6 @@ public class PushServiceSocket {
     }
   }
 
-  private Pair<String, String> makeRequestForResponseHeader(String urlFragment, String method,
-                                                            String body, String responseHeader)
-      throws IOException
-  {
-    HttpURLConnection connection  = makeBaseRequest(urlFragment, method, body);
-    String            response    = Util.readFully(connection.getInputStream());
-    String            headerValue = connection.getHeaderField(responseHeader);
-    connection.disconnect();
-
-    return new Pair<String, String>(headerValue, response);
-  }
-
   private String makeRequest(String urlFragment, String method, String body)
       throws IOException
   {
@@ -315,7 +308,7 @@ public class PushServiceSocket {
       throw new RateLimitException("Rate limit exceeded: " + connection.getResponseCode());
     }
 
-    if (connection.getResponseCode() == 403) {
+    if (connection.getResponseCode() == 401 || connection.getResponseCode() == 403) {
       throw new AuthorizationFailedException("Authorization failed!");
     }
 
@@ -403,15 +396,16 @@ public class PushServiceSocket {
     }
   }
 
-  private static class AttachmentKey {
+  private static class AttachmentDescriptor {
     private long id;
-
-    public AttachmentKey(long id) {
-      this.id = id;
-    }
+    private String location;
 
     public long getId() {
       return id;
+    }
+
+    public String getLocation() {
+      return location;
     }
   }
 
