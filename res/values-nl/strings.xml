@@ -1,419 +1,544 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
 <resources>
-  <string name="app_name">TextSecure</string>
-  <string name="yes">Ja</string>
-  <string name="no">Nee</string>
-  <string name="delete">Verwijder</string>
-  <!--ApplicationPreferencesActivity-->
-  <string name="ApplicationPreferencesActivity_currently_s">Momenteel: %s</string>
-  <string name="ApplicationPreferenceActivity_you_need_to_have_entered_your_passphrase_before_managing_keys">U moet uw wachtwoord hebben ingevoerd voor het beheren van sleutels...</string>
-  <string name="ApplicationPreferenceActivity_you_havent_set_a_passphrase_yet">U heeft nog geen wachtwoord ingesteld!</string>
-  <string name="ApplicationPreferencesActivity_messages_per_conversation">berichten per conversatie</string>
-  <string name="ApplicationPreferencesActivity_delete_all_old_messages_now">Nu alle oude berichten verwijderen?</string>
-  <string name="ApplicationPreferencesActivity_are_you_sure_you_would_like_to_immediately_trim_all_conversation_threads_to_the_s_most_recent_messages">Weet u zeker dat u bij alle conversaties alleen de laatste %s berichten behouden wilt?</string>
-  <string name="ApplicationPreferencesActivity_delete">Verwijderen</string>
-  <string name="ApplicationPreferencesActivity_my">Mijn</string>
-  <string name="ApplicationPreferencesActivity_disable_storage_encryption">Opslagversleuteling uitschakelen?</string>
-  <string name="ApplicationPreferencesActivity_warning_this_will_disable_storage_encryption_for_all_messages">\nLet op, dit schakelt opslagversleuteling uit voor alle berichten en sleutels. Je versleutelde sessies zullen blijven werken, maar iedereen met fysieke toegang tot je apparaat zal ze kunnen benaderen.</string>
-  <string name="ApplicationPreferencesActivity_disable">Uitschakelen</string>
-  <!--AttachmentTypeSelectorAdapter-->
-  <string name="AttachmentTypeSelectorAdapter_picture">Afbeelding</string>
-  <string name="AttachmentTypeSelectorAdapter_video">Video</string>
-  <string name="AttachmentTypeSelectorAdapter_audio">Audio</string>
-  <!--ConversationItem-->
-  <string name="ConversationItem_message_size_d_kb">Berichtgrootte: %d KB</string>
-  <string name="ConversationItem_expires_s">Verloopt: %s</string>
-  <string name="ConversationItem_error_sending_message">Fout bij versturen bericht</string>
-  <string name="ConversationItem_sending">Versturen...</string>
-  <string name="ConversationItem_saving_attachment">Bijlage Opslaan</string>
-  <string name="ConversationItem_saving_attachment_to_sd_card">Bijlage aan het opslaan op de SD-kaart...</string>
-  <string name="ConversationItem_save_to_sd_card">Opslaan op SD-kaart?</string>
-  <string name="ConversationItem_this_media_has_been_stored_in_an_encrypted_database_warning">Deze media is opgeslagen in een versleutelde database. De versie die u op de SD-kaart opslaat, zal niet langer versleuteld zijn. Wilt u doorgaan?</string>
-  <string name="ConversationItem_error_while_saving_attachment_to_sd_card">Fout tijdens het opslaan van de bijlage naar de SD-kaart!</string>
-  <string name="ConversationItem_success_exclamation">Succesvol!</string>
-  <string name="ConversationItem_unable_to_write_to_sd_card_exclamation">SD-kaart niet beschrijfbaar!</string>
-  <string name="ConversationItem_view_secure_media_question">Bekijk veilige media?</string>
-  <string name="ConversationItem_this_media_has_been_stored_in_an_encrypted_database_external_viewer_warning">Deze media is opgeslagen in een versleutelde database. Deze data moet helaas tijdelijk ontsleuteld en naar de opslagruimte geschreven worden om deze te bekijken met een externe applicatie. Weet u zeker dat u dit wilt?</string>
-  <string name="ConversationItem_received_and_processed_key_exchange_message">Sleuteluitwisselingsbericht ontvangen en verwerkt.</string>
-  <string name="ConversationItem_error_received_stale_key_exchange_message">Fout, verouderd steuteluitwisselingsbericht ontvangen.</string>
-  <string name="ConversationItem_received_key_exchange_message_click_to_process">Sleuteluitwisselingsbericht ontvangen, klik om te verwerken</string>
-  <!--ConversationActivity-->
-  <string name="ConversationActivity_initiate_secure_session_question">Initieer veilige sessie?</string>
-  <string name="ConversationActivity_initiate_secure_session_with_s_question">Initieer veilige sessie met %s?</string>
-  <string name="ConversationActivity_abort_secure_session_confirmation">Bevestiging afbreken beveiligde sessie</string>
-  <string name="ConversationActivity_are_you_sure_that_you_want_to_abort_this_secure_session_question">Weet u zeker dat u deze beveiligde sessie wilt stopzetten?</string>
-  <string name="ConversationActivity_delete_thread_confirmation">Conversatiebevestiging verwijderen</string>
-  <string name="ConversationActivity_are_you_sure_that_you_want_to_permanently_delete_this_conversation_question">Weet u zeker dat u deze conversatie permanent wilt verwijderen?</string>
-  <string name="ConversationActivity_add_attachment">Voeg bijlage toe</string>
-  <string name="ConversationActivity_compose_message">Bericht opstellen</string>
-  <string name="ConversationActivity_sorry_there_was_an_error_setting_your_attachment">Excuses, er trad een fout op bij het instellen van uw bijlage.</string>
-  <string name="ConversationActivity_sorry_the_selected_video_exceeds_message_size_restrictions">Excuses, de geselecteerde video overschrijdt de berichtgrootterestricties.</string>
-  <string name="ConversationActivity_sorry_the_selected_audio_exceeds_message_size_restrictions">Excuses, de geselecteerde audio overschrijdt de berichtgrootterestricties.</string>
-  <string name="ConversationActivity_recipient_is_not_a_valid_sms_or_email_address_exclamation">Ontvanger is niet een geldig SMS of e-mailadres!</string>
-  <string name="ConversationActivity_message_is_empty_exclamation">Bericht is leeg!</string>
-  <string name="ConversationActivity_forward_message_prefix">FWD</string>
-  <string name="ConversationActivity_group_conversation_recipients">Groepsconversatie Ontvangers</string>
-  <string name="ConversationActivity_group_conversation">Groepsconversatie</string>
-  <string name="ConversationActivity_d_recipients_in_group">%d ontvangers in groep</string>
-  <string name="ConversationActivity_saving_draft">Concept opslaan...</string>
-  <string name="ConversationActivity_invalid_recipient">Ongeldige ontvanger!</string>
-  <string name="ConversationActivity_calls_not_supported">Oproepen Niet Ondersteund</string>
-  <string name="ConversationActivity_this_device_does_not_appear_to_support_dial_actions">Dit apparaat lijkt dial-acties niet te ondersteunen.</string>
-  <!--ConversationFragment-->
-  <string name="ConversationFragment_message_details">Berichtdetails</string>
-  <string name="ConversationFragment_sender_s_transport_s_sent_received_s">Verzender: %1$s\nTransport: %2$s\nVerstuurd/Ontvangen:%3$s</string>
-  <string name="ConversationFragment_sender_s_transport_s_sent_s_received_s">Verzender: %1$s\nMedium: %2$s\nVerzonden: %3$s\nOntvangen:%4$s</string>
-  <string name="ConversationFragment_confirm_message_delete">Bevestig Bericht Verwijdering</string>
-  <string name="ConversationFragment_are_you_sure_you_want_to_permanently_delete_this_message">Weet u zeker dat u dit bericht permanent wilt verwijderen?</string>
-  <!--ConversationListAdapter-->
-  <string name="ConversationListAdapter_key_exchange_message">Sleuteluitwisselingsbericht...</string>
-  <!--ConversationListFragment-->
-  <string name="ConversationListFragment_delete_threads_question">Conversaties verwijderen?</string>
-  <string name="ConversationListFragment_are_you_sure_you_wish_to_delete_all_selected_conversation_threads">Weet u zeker dat u ALLE geselecteerde conversaties wilt verwijderen?</string>
-  <string name="ConversationListFragment_deleting">Aan het verwijderen</string>
-  <string name="ConversationListFragment_deleting_selected_threads">Geselecteerde conversaties aan het verwijderen...</string>
-  <!--ConversationListItem-->
-  <string name="ConversationListItem_key_exchange_message">Sleuteluitwisselingsbericht...</string>
-  <!--ExportFragment-->
-  <string name="ExportFragment_export_to_sd_card">Opslaan op SD-kaart?</string>
-  <string name="ExportFragment_this_will_export_your_encrypted_keys_settings_and_messages">Dit exporteert je keys, instellingen en berichten versleuteld naar de SD-kaart</string>
-  <string name="ExportFragment_export">Exporteer</string>
-  <string name="ExportFragment_export_plaintext_to_sd_card">Exporteer onversleutelde tekst naar SD-kaart?</string>
-  <string name="ExportFragment_warning_this_will_export_the_plaintext_contents">Waarschuwing, dit exporteert de onversleutelde tekst van je berichten in Textsecure naar de SD-kaart.</string>
-  <string name="ExportFragment_cancel">Annuleren</string>
-  <string name="ExportFragment_exporting">Aan het exporteren</string>
-  <string name="ExportFragment_exporting_plaintext_to_sd_card">Aan het exporteren naar de SD-kaart...</string>
-  <string name="ExportFragment_error_unable_to_write_to_sd_card">Fout, SD-kaart niet beschrijfbaar!</string>
-  <string name="ExportFragment_error_while_writing_to_sd_card">Fout tijdens het schrijven naar de SD-kaart.</string>
-  <string name="ExportFragment_success">Succesvol!</string>
-  <string name="ExportFragment_exporting_keys_settings_and_messages">Keys, instellingen en berichten versleuteld naar de SD-kaart aan het exporteren...</string>
-  <!--ImportFragment-->
-  <string name="ImportFragment_import_system_sms_database">SMS-berichten uit de systeemdatabase importeren?</string>
-  <string name="ImportFragment_this_will_import_messages_from_the_system">Dit zal berichten uit de standaard SMS-database van het systeem importeren naar TextSecure. Als je de SMS-database van het systeem voorheen hebt geïmporteerd, kan opnieuw importeren resulteren in dubbele berichten.</string>
-  <string name="ImportFragment_import">Importeer</string>
-  <string name="ImportFragment_cancel">Annuleren</string>
-  <string name="ImportFragment_restore_encrypted_backup">Versleutelde Back-up Herstellen?</string>
-  <string name="ImportFragment_restoring_an_encrypted_backup_will_completely_replace_your_existing_keys">\nHerstellen van een versleutelde back-up zal je bestaande sleutels, voorkeuren en berichten volledig vervangen. Je zult alle informatie verliezen die wel in je huidige TextSecure-installatie zit, maar niet de back-up.</string>
-  <string name="ImportFragment_restore">Herstellen</string>
-  <string name="ImportFragment_import_plaintext_backup">Niet-versleutelde Back-up Importeren?</string>
-  <string name="ImportFragment_this_will_import_messages_from_a_plaintext_backup">Dit zal berichten uit een niet-versleutelde back-up importeren. Als je de SMS-database van het systeem voorheen hebt geïmporteerd, kan opnieuw importeren resulteren in dubbele berichten.</string>
-  <string name="ImportFragment_importing">Importeren</string>
-  <string name="ImportFragment_import_plaintext_backup_elipse">Niet-versleutelde back-up importeren...</string>
-  <string name="ImportFragment_no_plaintext_backup_found">Geen niet-versleutelde back-up gevonden!</string>
-  <string name="ImportFragment_error_importing_backup">Fout bij het importeren van back-up!</string>
-  <string name="ImportFragment_import_complete">Importeren voltooid!</string>
-  <string name="ImportFragment_restoring">Herstellen</string>
-  <string name="ImportFragment_restoring_encrypted_backup">Versleutelde back-up herstellen...</string>
-  <string name="ImportFragment_no_encrypted_backup_found">Geen versleutelde back-up gevonden!</string>
-  <string name="ImportFragment_restore_complete">Herstellen voltooid!</string>
-  <!--KeyScanningActivity-->
-  <string name="KeyScanningActivity_no_scanned_key_found_exclamation">Geen gescande sleutel gevonden!</string>
-  <!--MmsDownloader-->
-  <string name="MmsDownloader_no_connectivity_available_for_mms_download_try_again_later">Geen connectie beschikbaar voor MMS download, probeer later opnieuw...</string>
-  <string name="MmsDownloader_error_storing_mms">MMS opslaan mislukt!</string>
-  <string name="MmsDownloader_error_connecting_to_mms_provider">Fout bij verbinden met MMS provider...</string>
-  <!--NotificationMmsMessageRecord-->
-  <string name="NotificationMmsMessageRecord_multimedia_message">Multimediabericht</string>
-  <!--PassphraseChangeActivity-->
-  <string name="PassphraseChangeActivity_passphrases_dont_match_exclamation">Wachtwoorden komen niet overeen!</string>
-  <string name="PassphraseChangeActivity_incorrect_old_passphrase_exclamation">Incorrect oud wachtwoord!</string>
-  <!--PassphraseCreateActivity-->
-  <string name="PassphraseCreateActivity_passphrases_dont_match">Wachtwoorden komen niet overeen</string>
-  <string name="PassphraseCreateActivity_you_must_specify_a_password">U moet een wachtwoord specificeren</string>
-  <!--PassphrasePromptActivity-->
-  <string name="PassphrasePromptActivity_invalid_passphrase_exclamation">Ongeldig wachtwoord!</string>
-  <!--PromptApnActivity-->
-  <string name="PromptApnActivity_you_must_specify_an_mmsc_url_for_your_carrier">U moet een MMSC URL specificeren voor uw provider.</string>
-  <string name="PromptApnActivity_mms_settings_updated">MMS Instellingen Geupdate</string>
-  <string name="PromptApnActivity_you_can_modify_these_values_from_the_textsecure_settings_menu_at_any_time_">U kunt deze instellingen op elk gewenst moment wijzigen via het TextSecure instellingen menu.</string>
-  <!--ReceiveKeyActivity-->
-  <string name="ReceiveKeyActivity_the_signature_on_this_key_exchange_is_different">De handtekening op deze sleuteluitwisseling is anders dan wat u eerder ontvangen heeft van dit contact. Dit kan betekenen dat iemand probeert uw communicatie the onderscheppen, of dat dit contact gewoon TextSecure opnieuw geïnstalleerd heeft en nu een nieuwe identiteitssleutel heeft.</string>
-  <string name="ReceiveKeyActivity_you_may_wish_to_verify_this_contact">U kunt wensen dit contact te verifiëren.</string>
-  <string name="ReceiveKeyActivity_the_signature_on_this_key_exchange_is_trusted_but">De handtekening op deze sleuteluitwisseling is vertrouwd, maar u heeft de \'automatisch aanvullen sleuteluitwisselingen\' instelling uitgeschakeld.</string>
-  <!--VerifyIdentityActivity-->
-  <string name="VerifyIdentityActivity_you_do_not_have_an_identity_key">U heeft geen identiteitssleutel.</string>
-  <string name="VerifyIdentityActivity_recipient_has_no_identity_key">De ontvanger heeft geen identiteitssleutel.</string>
-  <string name="VerifyIdentityActivity_recipient_has_no_identity_key_exclamation">De ontvanger heeft geen identiteitssleutel!</string>
-  <string name="VerifyIdentityActivity_scan_their_key_to_compare">Scan zijn/haar sleutel om te vergelijken</string>
-  <string name="VerifyIdentityActivity_get_my_key_scanned">Laat mijn sleutel scannen</string>
-  <string name="VerifyIdentityActivity_warning_the_scanned_key_does_not_match_please_check_the_fingerprint_text_carefully">WAARSCHUWING, de gescande sleutel komt NIET overeen! Controleert u alstublieft de vingerafdruk zorgvuldig.</string>
-  <string name="VerifyIdentityActivity_not_verified_exclamation">NIET Geverifieerd!</string>
-  <string name="VerifyIdentityActivity_their_key_is_correct_it_is_also_necessary_to_verify_your_key_with_them_as_well">Sleutel partner is correct. Het is ook nodig om uw sleutel door de partner te laten verifiëren.</string>
-  <string name="VerifyIdentityActivity_verified_exclamation">Geverifieerd</string>
-  <string name="VerifyIdentityActivity_you_don_t_have_an_identity_key_exclamation">U heeft geen identiteitssleutel!</string>
-  <!--VerifyKeysActivity-->
-  <string name="VerifyKeysActivity_get_my_fingerprint_scanned">Mijn sleutel vingerafdruk laten scannen</string>
-  <string name="VerifyKeysActivity_scan_their_fingerprint">Scan sleutel vingerafdruk partner</string>
-  <string name="VerifyKeysActivity_warning_the_scanned_key_does_not_match_please_check_the_fingerprint_text_carefully2">WAARSCHUWING, de gescande sleutel komt NIET overeen! Controleert u alstublieft de vingerafdruk zorgvuldig.</string>
-  <string name="VerifyKeysActivity_not_verified_exclamation">NIET Geverifieerd!</string>
-  <string name="VerifyKeysActivity_their_key_is_correct_it_is_also_necessary_to_get_your_fingerprint_scanned_as_well">De sleutel van de gesprekspartner is correct. Het is ook nodig om uw sleutel vingerafdruk te laten scannen.</string>
-  <string name="VerifyKeysActivity_verified_exclamation">Geverifieerd!</string>
-  <!--ViewIdentityActivity-->
-  <string name="ViewIdentityActivity_you_do_not_have_an_identity_key">U heeft geen identiteitssleutel.</string>
-  <string name="ViewIdentityActivity_scan_to_compare">Scan om te vergelijken</string>
-  <string name="ViewIdentityActivity_get_scanned_to_compare">Wordt gescand om te vergelijken</string>
-  <string name="ViewIdentityActivity_warning_the_scanned_key_does_not_match_exclamation">WAARSCHUWING, de gescande sleutel komt NIET overeen!</string>
-  <string name="ViewIdentityActivity_not_verified_exclamation">NIET Geverifieerd!</string>
-  <string name="ViewIdentityActivity_the_scanned_key_matches_exclamation">De gescande sleutel komt overeen!</string>
-  <string name="ViewIdentityActivity_verified_exclamation">Geverifieerd!</string>
-  <string name="ViewIdentityActivity_identity_fingerprint">Identiteitsvingerafdruk</string>
-  <!--KeyExchangeInitiator-->
-  <string name="KeyExchangeInitiator_initiate_despite_existing_request_question">Initiëren ondanks bestaand verzoek?</string>
-  <string name="KeyExchangeInitiator_youve_already_sent_a_session_initiation_request_to_this_recipient_are_you_sure">U heeft reeds een sessieinititatieverzoek verstuurd naar deze ontvanger, weet u zeker dat u er nog een wilt sturen? Dit maakt het eerdere verzoek ongeldig.</string>
-  <string name="KeyExchangeInitiator_send">Verstuur</string>
-  <!--MessageDisplayHelper-->
-  <string name="MessageDisplayHelper_bad_encrypted_message">Verkeerd versleuteld bericht...</string>
-  <string name="MessageDisplayHelper_decrypting_please_wait">Ontsleutelen, een moment...</string>
-  <string name="MessageDisplayHelper_message_encrypted_for_non_existing_session">Bericht ontsleuteld voor niet bestaande sessie...</string>
-  <!--MmsDatabase-->
-  <string name="MmsDatabase_connecting_to_mms_server">Verbinden met MMS server...</string>
-  <string name="MmsDatabase_downloading_mms">Downloaden van MMS...</string>
-  <string name="MmsDatabase_mms_download_failed">MMS Download mislukt!</string>
-  <string name="MmsDatabase_downloading">Downloaden...</string>
-  <!--MmsMessageRecord-->
-  <string name="MmsMessageRecord_decrypting_mms_please_wait">MMS ontsleutelen, een moment...</string>
-  <string name="MmsMessageRecord_bad_encrypted_mms_message">Verkeerd versleuteld MMS-bericht...</string>
-  <string name="MmsMessageRecord_mms_message_encrypted_for_non_existing_session">MMS-bericht versleuteld voor niet bestaande sessie...</string>
-  <!--MmsSender-->
-  <string name="MmsSender_currently_unable_to_send_your_mms_message">Momenteel niet in staat om uw MMS bericht te versturen.</string>
-  <!--ApplicationMigrationService-->
-  <string name="ApplicationMigrationService_import_in_progress">Bezig met importeren</string>
-  <string name="ApplicationMigrationService_importing_text_messages">Tekstberichten aan het importeren</string>
-  <!--KeyCachingService-->
-  <string name="KeyCachingService_textsecure_passphrase_cached">TextSecure Wachtwoord In Cache</string>
-  <string name="KeyCachingService_passphrase_cached">Wachtwoord In Cache</string>
-  <!--MessageNotifier-->
-  <string name="MessageNotifier_d_new_messages">(%d) Nieuwe berichten</string>
-  <string name="MessageNotifier_most_recent_from_s">Meest recente van: %s</string>
-  <string name="MessageNotifier_encrypted_message">Versleuteld bericht...</string>
-  <string name="MessageNotifier_no_subject">(Geen Onderwerp)</string>
-  <string name="MessageNotifier_message_delivery_failed">Berichtaflevering mislukt.</string>
-  <string name="MessageNotifier_failed_to_deliver_message">Het bericht afleveren is mislukt.</string>
-  <string name="MessageNotifier_error_delivering_message">Fout bij afleveren bericht.</string>
-  <string name="MessageNotifier_mark_all_as_read">Markeer alles als gelezen</string>
-  <string name="MessageNotifier_mark_as_read">Markeer als gelezen</string>
-  <!--ViewLocalIdentityActivity-->
-  <string name="ViewLocalIdentityActivity_regenerating">Regenereren</string>
-  <string name="ViewLocalIdentityActivity_regenerating_identity_key">Identiteit regenereren\nSleutel...</string>
-  <string name="ViewLocalIdentityActivity_regenerated">Geregenereerd!</string>
-  <string name="ViewLocalIdentityActivity_reset_identity_key">Identiteitssleutel opnieuw instellen?</string>
-  <string name="ViewLocalIdentityActivity_by_regenerating_your_identity_key_your_existing_contacts_will_receive_warnings">\nPas op! Door uw identiteitssleutel te regenereren zal uw huidige identiteitssleutel definitief verloren gaan,\nen uw huidige contacten zullen waarschuwingen krijgen wanneer zij een nieuwe beveiligde sessie met u starten.\nWeet u zeker dat u door wilt gaan?</string>
-  <string name="ViewLocalIdentityActivity_cancel">Annuleren</string>
-  <string name="ViewLocalIdentityActivity_continue">Doorgaan</string>
-  <!--SmsReceiver-->
-  <string name="SmsReceiver_currently_unable_to_send_your_sms_message">Momenteel niet in staat om uw SMS bericht te versturen. Zodra de service beschikbaar is zal het verzonden worden .</string>
-  <!--auto_initiate_activity-->
-  <string name="auto_initiate_activity__you_have_received_a_message_from_someone_who_supports_textsecure_encrypted_sessions_would_you_like_to_initiate_a_secure_session">U heeft een bericht ontvangen van iemand die versleutelde TextSecure sessies ondersteunt. Wilt u een beveiligde sessie initiëren?</string>
-  <string name="auto_initiate_activity__initiate_exchange">Initieer Uitwisseling</string>
-  <!--change_passphrase_activity-->
-  <string name="change_passphrase_activity__old_passphrase">Oud wachtwoord:</string>
-  <string name="change_passphrase_activity__new_passphrase">Nieuw wachtwoord:</string>
-  <string name="change_passphrase_activity__repeat_new_passphrase">Herhaal nieuw wachtwoord:</string>
-  <!--contact_selection_group_activity-->
-  <!--contact_selection_list_activity-->
-  <string name="contact_selection_group_activity__no_contacts">Geen contacten.</string>
-  <!--ContactSelectionListFragment-->
-  <string name="ContactSelectionlistFragment_select_for">Selecteer voor</string>
-  <!--contact_selection_recent_activity-->
-  <string name="contact_selection_recent_activity__no_recent_calls">Geen recente gesprekken.</string>
-  <!--conversation_activity-->
-  <string name="conversation_activity__type_message">Typ bericht</string>
-  <string name="conversation_activity__send">Verstuur</string>
-  <string name="conversation_activity__remove">Verwijder</string>
-  <!--conversation_item_sent-->
-  <string name="conversation_item_sent__download">Download</string>
-  <string name="conversation_item_sent__downloading">Downloaden</string>
-  <!--conversation_item_received-->
-  <string name="conversation_item_received__download">Download</string>
-  <string name="conversation_item_received__downloading">Downloaden</string>
-  <!--conversation_fragment_cab-->
-  <string name="conversation_fragment_cab__batch_selection_mode">Selecteer Meerdere Tegelijk</string>
-  <!--create_passphrase_activity-->
-  <string name="create_passphrase_activity__please_choose_a_passphrase_that_will_be_used_to_locally_encrypt_your_data_this_should_be_a_strong_passphrase">Kiest u alstublieft een wachtwoord welke gebruikt zal worden om lokaal uw data te versleutelen. Een sterk wachtwoord wordt aangeraden.</string>
-  <string name="create_passphrase_activity__passphrase">Wachtwoord:</string>
-  <string name="create_passphrase_activity__repeat">Herhaal:</string>
-  <string name="create_passphrase_activity__continue">Doorgaan</string>
-  <string name="create_passphrase_activity__generating_secrets">GEHEIMEN AAN HET GENEREREN</string>
-  <!--database_migration_activity-->
-  <string name="database_migration_activity__would_you_like_to_import_your_existing_text_messages">Wilt u uw huidige tekstberichtendatabase importeren naar de versleutelde database van TextSecure?</string>
-  <string name="database_migration_activity__the_default_system_database_will_not_be_modified">De standaard systeemdatabase zal niet gewijzigd of aangepast worden op enigerlei wijze.</string>
-  <string name="database_migration_activity__skip">Overslaan</string>
-  <string name="database_migration_activity__import">Importeer</string>
-  <string name="database_migration_activity__this_could_take_a_moment_please_be_patient">Dit kan een moment duren. Heb geduld, we zullen u op de hoogte stellen wanneer het importeren voltooid is.</string>
-  <string name="database_migration_activity__importing">AAN HET IMPORTEREN</string>
-  <!--database_upgrade_activity-->
-  <string name="database_upgrade_activity__updating_database">Database aan het updaten...</string>
-  <string name="export_fragment__export_encrypted_backup">Exporteer Versleutelde Back-up</string>
-  <string name="export_fragment__export_an_encrypted_backup_to_the_sd_card">Export een versleutelde back-up naar de SD-kaart.</string>
-  <string name="export_fragment__export_plaintext_backup">Exporteer Niet-versleutelde Back-up</string>
-  <string name="export_fragment__export_a_plaintext_backup_compatible_with">\nExporteer een niet-versleutelde back-up voor \'SMS Back-up En Herstellen\' naar de SD-kaart.</string>
-  <string name="import_fragment__import_system_sms_database">SMS-berichten uit de Systeemdatabase Importeren</string>
-  <string name="import_fragment__import_the_database_from_the_default_system">Importeer de database uit de standaard berichtenapp van het systeem.</string>
-  <string name="import_fragment__import_encrypted_backup">Importeer Versleutelde Back-up</string>
-  <string name="import_fragment__restore_a_previously_exported_encrypted_textsecure_backup">\nHerstel een eerder geëxporteerde versleutelde back-up van TextSecure.</string>
-  <string name="import_fragment__import_plaintext_backup">Importeer Niet-versleutelde Back-up</string>
-  <string name="import_fragment__import_a_plaintext_backup_file">\nImporteer een niet-versleutelde back-up voor \'SMS Back-up En Herstellen\'.</string>
-  <string name="local_identity__regenerate_key">Sleutel regenereren</string>
-  <!--prompt_passphrase_activity-->
-  <string name="prompt_passphrase_activity__textsecure_passphrase">TEXTSECURE WACHTWOORD</string>
-  <string name="prompt_passphrase_activity__unlock">Ontgrendel</string>
-  <!--prompt_apn_activity-->
-  <string name="prompt_apn_activity__textsecure_requires_apn_settings_to_deliver_media_messages_via_your_wireless_carrier">TextSecure heeft APN instellingen nodig om mediaberichten te kunnen versturen via uw telefoonprovider. Uw toestel heeft deze informatie niet beschikbaar, iets wat vaker voorkomt bij gelockte toestellen en andere beperkende configuraties.</string>
-  <string name="prompt_apn_activity__to_send_media_messages_please_complete_the_necessary_apn_information_below">Om mediaberichten te versturen, moet u de benodigde APN informatie hieronder opgeven. De waarden voor uw provider kunnen meestal gevonden worden door te zoeken naar \'&amp;lt;uw provider&amp;gt; APN\'. U hoeft dit maar eenmaal te doen.</string>
-  <string name="prompt_apn_activity__mmsc_url_required">MMSC URL (VEREIST):</string>
-  <string name="prompt_apn_activity__mms_proxy_host_optional">MMS PROXY HOST (OPTIONEEL):</string>
-  <string name="prompt_apn_activity__mms_proxy_port_optional">MMS PROXY POORT (OPTIONEEL):</string>
-  <!--receive_key_activity-->
-  <string name="receive_key_activity__complete">Voltooid</string>
-  <!--recipients_panel-->
-  <string name="recipients_panel__to">Aan</string>
-  <!--review_identities-->
-  <string name="review_identities__you_don_t_currently_have_any_identity_keys_in_your_trust_database">U heeft momenteel geen identiteitssleutels in uw vertrouwensdatabase.</string>
-  <!--verify_identity_activity-->
-  <string name="verify_identity_activity__their_identity_they_read">Identiteit partner (partner leest):</string>
-  <string name="verify_identity_activity__your_identity_you_read">Uw identiteit (u leest):</string>
-  <!--verify_import_identity_activity-->
-  <string name="verify_import_identity_activity__identity_name_n">Identiteitsnaam:\\n</string>
-  <string name="verify_import_identity_activity__imported_identity_n">Geïmporteerde identiteit:\\n</string>
-  <string name="verify_import_identity_activity__verified">Geverifieerd!</string>
-  <string name="verify_import_identity_activity__compare">Vergelijk</string>
-  <!--verify_keys_activity-->
-  <string name="verify_keys_activity__they_read_this">Partner leest dit:</string>
-  <string name="verify_keys_activity__you_read_this">U leest dit:</string>
-  <!--AndroidManifest.xml-->
-  <string name="AndroidManifest__create_passphrase">Creëer Wachtwoord</string>
-  <string name="AndroidManifest__enter_passphrase">Voer Wachtwoord In</string>
-  <string name="AndroidManifest__select_contacts">Selecteer Contacten</string>
-  <string name="AndroidManifest__textsecure_detected">TextSecure gedetecteerd</string>
-  <string name="AndroidManifest__public_identity_key">Publieke Identiteitssleutel</string>
-  <string name="AndroidManifest__change_passphrase">Wachtwoord Veranderen</string>
-  <string name="AndroidManifest__verify_session">Verifieer Sessie</string>
-  <string name="AndroidManifest__verify_identity">Identiteit Verifiëren</string>
-  <string name="AndroidManifest__manage_identity_keys">Identiteitssleutels Beheren</string>
-  <string name="AndroidManifest__complete_key_exchange">Sleuteluitwisseling Voltooien</string>
-  <!--arrays.xml-->
-  <string name="arrays__import_export">Importeer / Exporteer</string>
-  <string name="arrays__my_identity_key">Mijn Identiteitssleutel</string>
-  <string name="arrays__contact_keys">Sleutels van Contacten</string>
-  <!--preferences.xml-->
-  <string name="preferences__general">Algemeen</string>
-  <string name="preferences__pref_all_sms_title">Gebruik voor alle SMS</string>
-  <string name="preferences__pref_all_mms_title">Gebruik voor alle MMS</string>
-  <string name="preferences__use_textsecure_for_viewing_and_storing_all_incoming_text_messages">Gebruik TextSecure voor het bekijken en opslaan van alle inkomende tekstberichten</string>
-  <string name="preferences__use_textsecure_for_viewing_and_storing_all_incoming_multimedia_messages">Gebruik TextSecure voor het bekijken en opslaan van alle inkomende multimediaberichten</string>
-  <string name="preferences__pref_enter_sends_title">Enter verstuurt</string>
-  <string name="preferences__pressing_the_enter_key_will_send_text_messages">De \'Enter\' toets gebruiken voor versturen tekstberichten</string>
-  <string name="preferences__display_settings">Beeldscherminstellingen</string>
-  <string name="preferences__choose_identity">Kies Identiteit</string>
-  <string name="preferences__choose_your_contact_entry_from_the_contacts_list">Kies uw contactinformatie uit de contactpersonenlijst.</string>
-  <string name="preferences__change_passphrase">Verander wachtwoord</string>
-  <string name="preferences__change_my_passphrase">Verander mijn wachtwoord</string>
-  <string name="preferences__complete_key_exchanges">Voltooi sleuteluitwisselingen</string>
-  <string name="preferences__disable_passphrase">Wachtwoord uitschakelen</string>
-  <string name="preferences__disable_local_encryption_of_messages_and_keys">Lokale versleuteling van berichten en sleutels uitschakelen</string>
-  <string name="preferences__automatically_complete_key_exchanges_for_new_sessions_or_for_existing_sessions_with_the_same_identity_key">Automatisch sleuteluitwisselingen voltooien voor nieuwe sessies of voor bestaande sessies met dezelfde identiteitssleutel</string>
-  <string name="preferences__forget_passphrase_from_memory_after_some_interval">Vergeet het wachtwoord uit het geheugen na een bepaalde tijd</string>
-  <string name="preferences__timeout_passphrase">Time-out wachtwoord</string>
-  <string name="preferences__pref_timeout_interval_dialogtitle">Selecteer Wachtwoord Time-out</string>
-  <string name="preferences__pref_timeout_interval_title">Time-out interval</string>
-  <string name="preferences__the_amount_of_time_to_wait_before_forgetting_passphrase">Hoe lang te wachten voor het vergeten van het wachtwoord uit het geheugen</string>
-  <string name="preferences__identity_key_settings">Identiteitssleutels</string>
-  <string name="preferences__view_my_identity_key">Bekijk mijn identiteitssleutel</string>
-  <string name="preferences__manage_identity_keys">Beheer identiteitssleutels</string>
-  <string name="preferences__manage_configured_identity_keys">Beheer ingestelde identiteitssleutels</string>
-  <string name="preferences__notifications">Notificaties</string>
-  <string name="preferences__display_message_notifications_in_status_bar">Toon berichtmeldingen in notificatiebalk</string>
-  <string name="preferences__led_color">LED Kleur</string>
-  <string name="preferences__change_notification_led_color">Wijzig notificatie LED kleur</string>
-  <string name="preferences__pref_led_blink_title">LED Knipperpatroon</string>
-  <string name="preferences__change_notification_blink_pattern">Verander notificatie LED knipperpatroon</string>
-  <string name="preferences__pref_led_blink_dialogtitle">Selecteer LED Knipperpatroon</string>
-  <string name="preferences__select_led_color">Selecteer LED Kleur</string>
-  <string name="preferences__vibrate">Trillen</string>
-  <string name="preferences__also_vibrate_when_notified">Ook trillen bij notificaties</string>
-  <string name="preferences__minutes">minuten</string>
-  <string name="preferences__hours">uren</string>
-  <string name="preferences__green">Groen</string>
-  <string name="preferences__red">Rood</string>
-  <string name="preferences__blue">Blauw</string>
-  <string name="preferences__orange">Oranje</string>
-  <string name="preferences__cyan">Cyaan</string>
-  <string name="preferences__magenta">Magenta</string>
-  <string name="preferences__fast">Snel</string>
-  <string name="preferences__normal">Normaal</string>
-  <string name="preferences__slow">Langzaam</string>
-  <string name="preferences__custom">Aangepast</string>
-  <string name="preferences__advanced">Geavanceerd</string>
-  <string name="preferences__passphrase">Wachtwoord</string>
-  <string name="preferences__advanced_mms_access_point_names">Reserve MMSC</string>
-  <string name="preferences__enable_fallback_mmsc">Fallback MMSC Activeren</string>
-  <string name="preferences__use_mmsc_information_configured_here_when_system_apn_information_is_unavailable">Gebruik de hier ingestelde MMSC informatie wanneer de APN informatie van het systeem niet beschikbaar is.</string>
-  <string name="preferences__mmsc_url_required">MMSC URL (Vereist)</string>
-  <string name="preferences__mms_proxy_host_optional">MMS Proxy Host (Optioneel)</string>
-  <string name="preferences__mms_proxy_port_optional">MMS Proxy Poort (Optioneel)</string>
-  <string name="preferences__request_a_delivery_report_for_each_sms_message_you_send">Verzoek om een ontvangstbevestiging voor ieder verzonden SMS bericht</string>
-  <string name="preferences__sms_delivery_reports">SMS ontvangstbevestigingen</string>
-  <string name="preferences__automatically_delete_older_messages_once_a_conversation_thread_exceeds_a_specified_length">Automatisch oudere berichten verwijderen wanneer een conversatie meer dan een bepaald aantal berichten bevat</string>
-  <string name="preferences__delete_old_messages">Verwijder oude berichten</string>
-  <string name="preferences__storage">Opslag</string>
-  <string name="preferences__conversation_length_limit">Conversatielengte limiet</string>
-  <string name="preferences__trim_all_threads_now">Oudere conversatieberichten nu verwijderen</string>
-  <string name="preferences__scan_through_all_conversation_threads_and_enforce_conversation_length_limits">Alle conversaties scannen en de maximale conversatielengte toepassen</string>
-  <string name="preferences__light_theme">Licht Thema</string>
-  <string name="preferences__dark_theme">Donker Thema</string>
-  <string name="preferences__appearance">Uiterlijk</string>
-  <string name="preferences__theme">Thema</string>
-  <string name="preferences__default">Standaard</string>
-  <string name="preferences__language">Taal</string>
-  <!--****************************************-->
-  <!--menus-->
-  <!--****************************************-->
-  <!--contact_selection_list-->
-  <string name="contact_selection_list__menu_select_all">Alles Selecteren</string>
-  <string name="contact_selection_list__menu_unselect_all">Alles Deselecteren</string>
-  <!--contact_selection-->
-  <string name="contact_selection__menu_finished">Voltooid</string>
-  <!--conversation_button_context-->
-  <string name="conversation_button_context__menu_send_unencrypted">Verstuur onversleuteld</string>
-  <!--conversation_callable-->
-  <string name="conversation_callable__menu_call">Bel</string>
-  <!--conversation_context-->
-  <string name="conversation_context__menu_message_details">Bericht details</string>
-  <string name="conversation_context__menu_copy_text">Tekst kopiëren</string>
-  <string name="conversation_context__menu_delete_message">Bericht verwijderen</string>
-  <string name="conversation_context__menu_forward_message">Bericht doorsturen</string>
-  <!--conversation_insecure-->
-  <string name="conversation_insecure__menu_start_secure_session">Begin Beveiligde Sessie</string>
-  <!--conversation_list_batch-->
-  <string name="conversation_list_batch__menu_delete_selected">Verwijder Geselecteerde</string>
-  <string name="conversation_list_batch__menu_select_all">Alles Selecteren</string>
-  <!--conversation_list-->
-  <string name="conversation_list__menu_search">Zoeken</string>
-  <!--conversation_secure_verified-->
-  <string name="conversation_secure_verified__menu_security">Veiligheid</string>
-  <string name="conversation_secure_verified__menu_verify_session">Verifieer Sessie</string>
-  <string name="conversation_secure_verified__menu_verify_recipient">Verifieer Ontvanger</string>
-  <string name="conversation_secure_verified__menu_abort_secure_session">Stop Beveiligde Sessie</string>
-  <!--conversation-->
-  <string name="conversation__menu_add_attachment">Voeg bijlage toe</string>
-  <string name="conversation__menu_delete_thread">Verwijder gehele gesprek</string>
-  <!--conversation_group_options-->
-  <string name="convesation_group_options__recipients_list">Lijst met ontvangers</string>
-  <string name="conversation_group_options__delivery">Verzending</string>
-  <string name="conversation_group_options__conversation">Conversatie</string>
-  <string name="conversation_group_options__broadcast">Uitzenden</string>
-  <!--key_scanning-->
-  <string name="key_scanning__menu_compare">Vergelijken</string>
-  <string name="key_scanning__menu_get_scanned_to_compare">Wordt gescand om te vergelijken</string>
-  <string name="key_scanning__menu_scan_to_compare">Scan om te vergelijken</string>
-  <!--text_secure_locked-->
-  <string name="text_secure_locked__menu_unlock">Ontgrendel</string>
-  <!--text_secure_normal-->
-  <string name="text_secure_normal__menu_new_message">Nieuw Bericht</string>
-  <string name="text_secure_normal__menu_settings">Instellingen</string>
-  <string name="text_secure_normal__menu_clear_passphrase">Vergrendelen</string>
-  <string name="text_secure_normal__mark_all_as_read">Markeer Alles Als Gelezen</string>
-  <!--verify_keys-->
-  <string name="verify_keys__menu_verified">Geverifieerd</string>
-  <!--EOF-->
+    <string name="app_name">TextSecure</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nee</string>
+    <string name="delete">Verwijderen</string>
+
+    <string name="ApplicationPreferencesActivity_currently_s">Momenteel: %s</string>
+    <string name="ApplicationPreferenceActivity_you_need_to_have_entered_your_passphrase_before_managing_keys">U moet uw wachtwoord hebben ingevoerd voor het beheren van sleutels\u2026</string>
+    <string name="ApplicationPreferenceActivity_you_havent_set_a_passphrase_yet">U heeft nog geen wachtwoord ingesteld</string>
+    <string name="ApplicationPreferencesActivity_messages_per_conversation">berichten per gesprek</string>
+    <string name="ApplicationPreferencesActivity_delete_all_old_messages_now">Nu alle oude berichten verwijderen?</string>
+    <string name="ApplicationPreferencesActivity_are_you_sure_you_would_like_to_immediately_trim_all_conversation_threads_to_the_s_most_recent_messages">Weet u zeker dat u bij alle gesprekken alleen de laatste %s berichten wilt behouden?</string>
+    <string name="ApplicationPreferencesActivity_delete">Verwijderen</string>
+    <string name="ApplicationPreferencesActivity_my">Mijn</string>
+    <string name="ApplicationPreferencesActivity_disable_storage_encryption">Opslagversleuteling uitschakelen?</string>
+    <string name="ApplicationPreferencesActivity_warning_this_will_disable_storage_encryption_for_all_messages">Let op: dit schakelt opslagversleuteling uit voor alle berichten en sleutels. Uw versleutelde sessies zullen blijven werken, maar iedereen met fysieke toegang tot uw apparaat zal ze kunnen benaderen.</string>
+    <string name="ApplicationPreferencesActivity_disable">Uitschakelen</string>
+
+    <string name="ApplicationPreferencesActivity_unregistering">Afmelden\u2026</string>
+    <string name="ApplicationPreferencesActivity_unregistering_for_data_based_communication">Afmelden voor internetcommunicatie</string>
+    <string name="ApplicationPreferencesActivity_error_connecting_to_server">Kan geen verbinding maken met de server</string>
+
+    <string name="AttachmentTypeSelectorAdapter_picture">Afbeelding</string>
+    <string name="AttachmentTypeSelectorAdapter_video">Video</string>
+    <string name="AttachmentTypeSelectorAdapter_audio">Audio</string>
+
+    <string name="ConversationItem_message_size_d_kb">Berichtgrootte: %d kB</string>
+    <string name="ConversationItem_expires_s">Verloopt: %s</string>
+    <string name="ConversationItem_error_sending_message">Fout bij verzenden bericht</string>
+    <string name="ConversationItem_sending">Verzenden\u2026</string>
+    <string name="ConversationItem_saving_attachment">Bijlage opslaan\u2026</string>
+    <string name="ConversationItem_saving_attachment_to_sd_card">Bijlage opslaan op SD-kaart\u2026</string>
+    <string name="ConversationItem_save_to_sd_card">Weet u zeker dat u de bijlage wilt opslaan op de SD-kaart?</string>
+    <string name="ConversationItem_this_media_has_been_stored_in_an_encrypted_database_warning">Deze bijlage is opgeslagen in een versleutelde database. De versie die u op de SD-kaart opslaat, zal niet langer versleuteld zijn. Wilt u doorgaan?</string>
+    <string name="ConversationItem_error_while_saving_attachment_to_sd_card">Kan bijlage niet opslaan op SD-kaart</string>
+    <string name="ConversationItem_success_exclamation">Succesvol</string>
+    <string name="ConversationItem_unable_to_write_to_sd_card_exclamation">SD-kaart niet beschrijfbaar</string>
+    <string name="ConversationItem_view_secure_media_question">Veilige media bekijken?</string>
+    <string name="ConversationItem_this_media_has_been_stored_in_an_encrypted_database_external_viewer_warning">Deze bijlage is opgeslagen in een versleutelde database. De gegevens moeten tijdelijk worden ontsleuteld en naar de opslagruimte worden geschreven om deze te bekijken met een externe app. Weet u zeker dat u door wilt gaan?</string>
+    <string name="ConversationItem_received_and_processed_key_exchange_message">Sleuteluitwisselingsbericht ontvangen en verwerkt.</string>
+    <string name="ConversationItem_error_received_stale_key_exchange_message">Fout: verouderd sleuteluitwisselingsbericht ontvangen.</string>
+    <string name="ConversationItem_received_key_exchange_message_click_to_process">Sleuteluitwisselingsbericht ontvangen, tik om te verwerken</string>
+
+    <string name="ConversationActivity_initiate_secure_session_question">Veilige sessie starten?</string>
+    <string name="ConversationActivity_initiate_secure_session_with_s_question">Veilige sessie starten met %s?</string>
+    <string name="ConversationActivity_abort_secure_session_confirmation">Beveiligde sessie stoppen?</string>
+    <string name="ConversationActivity_are_you_sure_that_you_want_to_abort_this_secure_session_question">Weet u zeker dat u deze beveiligde sessie wilt stoppen?</string>
+    <string name="ConversationActivity_delete_thread_confirmation">Groepsgesprek verwijderen?</string>
+    <string name="ConversationActivity_are_you_sure_that_you_want_to_permanently_delete_this_conversation_question">Weet u zeker dat u dit gesprek permanent wilt verwijderen?</string>
+    <string name="ConversationActivity_add_attachment">Bijlage toevoegen</string>
+
+    <string name="ConversationActivity_select_contact_info">Contactgegevens selecteren</string>
+
+    <string name="ConversationActivity_compose_message">Bericht opstellen</string>
+    <string name="ConversationActivity_sorry_there_was_an_error_setting_your_attachment">Kan bijlage niet toevoegen.</string>
+    <string name="ConversationActivity_sorry_the_selected_video_exceeds_message_size_restrictions">Het geselecteerde videobestand maakt bericht te groot.</string>
+    <string name="ConversationActivity_sorry_the_selected_audio_exceeds_message_size_restrictions">Het geselecteerde audiobestand maakt bericht te groot.</string>
+    <string name="ConversationActivity_recipient_is_not_a_valid_sms_or_email_address_exclamation">Ontvanger is geen geldig nummer of e-mailadres</string>
+    <string name="ConversationActivity_message_is_empty_exclamation">Bericht is leeg</string>
+    <string name="ConversationActivity_forward_message_prefix">FW</string>
+    <string name="ConversationActivity_group_conversation_recipients">Ontvangers groepsgesprek</string>
+    <string name="ConversationActivity_group_conversation">Groepsgesprek</string>
+    <string name="ConversationActivity_d_recipients_in_group">%d ontvangers in groep</string>
+    <string name="ConversationActivity_saving_draft">Concept opslaan\u2026</string>
+    <string name="ConversationActivity_invalid_recipient">Ontvanger ongeldig</string>
+    <string name="ConversationActivity_calls_not_supported">Bellen niet ondersteund</string>
+    <string name="ConversationActivity_this_device_does_not_appear_to_support_dial_actions">Uw apparaat ondersteunt geen oproepen.</string>
+
+    <string name="ConversationFragment_message_details">Berichtdetails</string>
+    <string name="ConversationFragment_sender_s_transport_s_sent_received_s">Verzender: %1$s\nTransport: %2$s\nVerstuurd/ontvangen: %3$s</string>
+    <string name="ConversationFragment_sender_s_transport_s_sent_s_received_s">Verzender: %1$s\nMedium: %2$s\nVerzonden: %3$s\nOntvangen: %4$s</string>
+    <string name="ConversationFragment_confirm_message_delete">Bericht verwijderen?</string>
+    <string name="ConversationFragment_are_you_sure_you_want_to_permanently_delete_this_message">Weet u zeker dat u dit bericht permanent wilt verwijderen?</string>
+
+    <string name="ConversationListAdapter_key_exchange_message">Sleuteluitwisselingsbericht\u2026</string>
+
+    <string name="ConversationListFragment_delete_threads_question">Gesprekken verwijderen?</string>
+    <string name="ConversationListFragment_are_you_sure_you_wish_to_delete_all_selected_conversation_threads">Weet u zeker dat u alle geselecteerde gesprekken wilt verwijderen?</string>
+    <string name="ConversationListFragment_deleting">Verwijderen\u2026</string>
+    <string name="ConversationListFragment_deleting_selected_threads">Geselecteerde gesprekken verwijderen\u2026</string>
+
+    <string name="ConversationListItem_key_exchange_message">Sleuteluitwisselingsbericht\u2026</string>
+
+    <string name="ExportFragment_export_to_sd_card">Opslaan op SD-kaart?</string>
+    <string name="ExportFragment_this_will_export_your_encrypted_keys_settings_and_messages">Dit exporteert uw sleutels, instellingen en berichten versleuteld naar de SD-kaart</string>
+    <string name="ExportFragment_export">Exporteren</string>
+    <string name="ExportFragment_export_plaintext_to_sd_card">Tekst onversleuteld naar SD-kaart exporteren?</string>
+    <string name="ExportFragment_warning_this_will_export_the_plaintext_contents">Let op: dit exporteert de tekst van uw berichten in Textsecure onversleuteld naar de SD-kaart.</string>
+    <string name="ExportFragment_cancel">Annuleren</string>
+    <string name="ExportFragment_exporting">Exporteren\u2026</string>
+    <string name="ExportFragment_exporting_plaintext_to_sd_card">Exporteren naar de SD-kaart\u2026</string>
+    <string name="ExportFragment_error_unable_to_write_to_sd_card">Fout: SD-kaart niet beschrijfbaar</string>
+    <string name="ExportFragment_error_while_writing_to_sd_card">Kan niet schrijven naar SD-kaart.</string>
+    <string name="ExportFragment_success">Succesvol</string>
+    <string name="ExportFragment_exporting_keys_settings_and_messages">Sleutels, instellingen en berichten versleuteld naar de SD-kaart exporteren\u2026</string>
+
+    <string name="ImportFragment_import_system_sms_database">Sms-berichten uit de systeemdatabase importeren?</string>
+    <string name="ImportFragment_this_will_import_messages_from_the_system">Hiermee worden berichten uit de standaard sms-database van het systeem geïmporteerd. Als u de sms-database van het systeem al eens eerder hebt geïmporteerd, kan dit leiden tot dubbele berichten.</string>
+    <string name="ImportFragment_import">Importeren</string>
+    <string name="ImportFragment_cancel">Annuleren</string>
+    <string name="ImportFragment_restore_encrypted_backup">Versleutelde back-up herstellen?</string>
+    <string name="ImportFragment_restoring_an_encrypted_backup_will_completely_replace_your_existing_keys">Hiermee worden uw sleutels, instellingen en berichten volledig vervangen. De gegevens in uw huidige TextSecure-installatie worden gewist, maar de back-up niet.</string>
+    <string name="ImportFragment_restore">Herstellen</string>
+    <string name="ImportFragment_import_plaintext_backup">Onversleutelde back-up importeren?</string>
+    <string name="ImportFragment_this_will_import_messages_from_a_plaintext_backup">Hiermee worden berichten uit een onversleutelde back-up geïmporteerd. Als u de sms-database van het systeem al eens eerder hebt geïmporteerd, kan dit leiden tot dubbele berichten.</string>
+    <string name="ImportFragment_importing">Importeren</string>
+    <string name="ImportFragment_import_plaintext_backup_elipse">Onversleutelde back-up importeren\u2026</string>
+    <string name="ImportFragment_no_plaintext_backup_found">Geen onversleutelde back-up gevonden</string>
+    <string name="ImportFragment_error_importing_backup">Kan back-up niet importeren</string>
+    <string name="ImportFragment_import_complete">Importeren voltooid</string>
+    <string name="ImportFragment_restoring">Herstellen</string>
+    <string name="ImportFragment_restoring_encrypted_backup">Versleutelde back-up herstellen\u2026</string>
+    <string name="ImportFragment_no_encrypted_backup_found">Geen versleutelde back-up gevonden</string>
+    <string name="ImportFragment_restore_complete">Herstellen voltooid</string>
+
+    <string name="KeyScanningActivity_no_scanned_key_found_exclamation">Geen gescande sleutel gevonden</string>
+
+    <string name="MmsDownloader_no_connectivity_available_for_mms_download_try_again_later">Geen verbinding beschikbaar om mms-berichten te downloaden, probeer het later opnieuw\u2026</string>
+    <string name="MmsDownloader_error_storing_mms">Kan mms niet opslaan</string>
+    <string name="MmsDownloader_error_connecting_to_mms_provider">Kan geen verbinding maken met mms-provider\u2026</string>
+    <string name="MmsDownloader_error_reading_mms_settings">Kan mms-instellingen provider niet lezen</string>
+
+    <string name="NotificationMmsMessageRecord_multimedia_message">Multimediabericht</string>
+
+    <string name="PassphraseChangeActivity_passphrases_dont_match_exclamation">Wachtwoorden komen niet overeen</string>
+    <string name="PassphraseChangeActivity_incorrect_old_passphrase_exclamation">Incorrect oud wachtwoord</string>
+
+    <string name="PassphraseCreateActivity_passphrases_dont_match">Wachtwoorden komen niet overeen</string>
+    <string name="PassphraseCreateActivity_you_must_specify_a_password">U moet een wachtwoord opgeven</string>
+
+    <string name="PassphrasePromptActivity_invalid_passphrase_exclamation">Ongeldig wachtwoord</string>
+
+    <string name="PromptMmsActivity_you_must_specify_an_mmsc_url_for_your_carrier">U moet de MMSC-url invoeren van uw provider.</string>
+    <string name="PromptMmsActivity_mms_settings_updated">Mms-instellingen bijgewerkt</string>
+    <string name="PromptMmsActivity_you_can_modify_these_values_from_the_textsecure_settings_menu_at_any_time_">U kunt deze instellingen op elk moment wijzigen via Instellingen.</string>
+
+    <string name="ReceiveKeyActivity_the_signature_on_this_key_exchange_is_different">De handtekening op deze sleuteluitwisseling is anders dan wat u eerder ontvangen heeft van dit contact. Dit kan betekenen dat iemand uw communicatie probeert te onderscheppen, of dat deze persoon TextSecure opnieuw geïnstalleerd heeft en nu een nieuwe identiteitssleutel heeft.</string>
+    <string name="ReceiveKeyActivity_you_may_wish_to_verify_this_contact">Mogelijk wilt u dit contact verifiëren.</string>
+    <string name="ReceiveKeyActivity_the_signature_on_this_key_exchange_is_trusted_but">De handtekening op deze sleuteluitwisseling is vertrouwd, maar u heeft de instelling \'Sleuteluitwisselingen voltooien\' uitgeschakeld.</string>
+
+    <string name="ReceiveKeyActivity_processing">Verwerken</string>
+    <string name="ReceiveKeyActivity_processing_key_exchange">Sleuteluitwisseling verwerken\u2026</string>
+
+    <string name="RegistrationActivity_connect_with_textsecure">Verbinding maken met TextSecure</string>
+    <string name="RegistrationActivity_select_your_country">Uw land selecteren</string>
+    <string name="RegistrationActivity_you_must_specify_your_country_code">U moet een landcode invoeren.</string>
+    <string name="RegistrationActivity_you_must_specify_your_phone_number">U moet een telefoonnummer invoeren.</string>
+    <string name="RegistrationActivity_invalid_number">Ongeldig nummer</string>
+    <string name="RegistrationActivity_the_number_you_specified_s_is_invalid">Ingevoerd nummer (%s) is ongeldig.</string>
+    <string name="RegistrationActivity_unsupported">Niet ondersteund</string>
+    <string name="RegistrationActivity_sorry_this_device_is_not_supported_for_data_messaging">Uw apparaat kan geen internetberichten versturen. Apparaten met een lagere versie dan Android 4.0 vereisen een geregistreerd Google-account. Dit geldt niet voor Android 4.0 en hoger, maar de Play Store-app moet wel geïnstalleerd zijn.</string>
+    <string name="RegistrationActivity_we_will_now_verify_that_the_following_number_is_associated_with_your_device_s">Er wordt nu gecontroleerd of dit nummer bij uw apparaat hoort:\n\n%s\n\nIs dit nummer juist of wilt u het wijzigen?</string>
+    <string name="RegistrationActivity_continue">Verder</string>
+    <string name="RegistrationActivity_edit">Wijzigen</string>
+
+    <string name="RegistrationProblemsActivity_possible_problems">Mogelijke problemen</string>
+
+    <string name="RegistrationProgressActivity_verifying_number">Nummer verifiëren</string>
+    <string name="RegistrationProgressActivity_edit_s">%s wijzigen</string>
+    <string name="RegistrationProgressActivity_registration_complete">Registratie voltooid</string>
+    <string name="RegistrationProgressActivity_possible_problems">Mogelijke problemen.</string>
+    <string name="RegistrationProgressActivity_you_must_enter_the_code_you_received_first">U moet eerst de code invoeren die u heeft ontvangen\u2026</string>
+    <string name="RegistrationProgressActivity_connecting">Verbinding maken</string>
+    <string name="RegistrationProgressActivity_connecting_for_verification">Verbinding maken voor verificatie\u2026</string>
+    <string name="RegistrationProgressActivity_network_error">Netwerkfout</string>
+    <string name="RegistrationProgressActivity_unable_to_connect">Kan geen verbinding maken. Controleer uw internetverbinding en probeer het opnieuw.</string>
+    <string name="RegistrationProgressActivity_verification_failed">Verificatie mislukt</string>
+    <string name="RegistrationProgressActivity_the_verification_code_you_submitted_is_incorrect">De ingevoerde code is onjuist. Probeer het opnieuw.</string>
+    <string name="RegistrationProgressActivity_too_many_attempts">Te veel pogingen</string>
+    <string name="RegistrationProgressActivity_youve_submitted_an_incorrect_verification_code_too_many_times">Te vaak een onjuiste code ingevoerd. Probeer het over een minuut opnieuw.</string>
+    <string name="RegistrationProgressActivity_requesting_call">Gesprek aanvragen</string>
+    <string name="RegistrationProgressActivity_requesting_incoming_call">Verificatiegesprek aanvragen\u2026</string>
+    <string name="RegistrationProgressActivity_server_error">Serverfout</string>
+    <string name="RegistrationProgressActivity_the_server_encountered_an_error">Er is een serverfout opgetreden. Probeer het opnieuw.</string>
+    <string name="RegistrationProgressActivity_too_many_requests">Te veel verzoeken</string>
+    <string name="RegistrationProgressActivity_youve_already_requested_a_voice_call">U heeft al een gesprek aangevraagd. U kunt een nieuwe aanvragen over 20 minuten.</string>
+    <string name="RegistrationProgressActivity_verifying_voice_code">Gesprekscode verifiëren\u2026</string>
+
+    <string name="RegistrationService_registration_complete">Registratie voltooid</string>
+    <string name="RegistrationService_textsecure_registration_has_successfully_completed">Registreren bij TextSecure is succesvol voltooid.</string>
+    <string name="RegistrationService_registration_error">Registratiefout</string>
+    <string name="RegistrationService_textsecure_registration_has_encountered_a_problem">Er is een fout opgetreden tijdens registreren bij TextSecure.</string>
+
+    <string name="SmsMessageRecord_received_corrupted_key_exchange_message">Corrupt uitwisselingssleutelbericht ontvangen.</string>
+    <string name="SmsMessageRecord_received_key_exchange_message_for_invalid_protocol_version">Uitwisselingssleutelbericht van foutief protocol ontvangen.</string>
+    <string name="SmsMessageRecord_received_message_with_unknown_identity_key_click_to_process">Bericht met onbekende identiteitssleutel ontvangen. Tik om te verwerken en weer te geven.</string>
+
+    <string name="VerifyIdentityActivity_you_do_not_have_an_identity_key">U heeft geen identiteitssleutel.</string>
+    <string name="VerifyIdentityActivity_recipient_has_no_identity_key">De ontvanger heeft geen identiteitssleutel.</string>
+    <string name="VerifyIdentityActivity_recipient_has_no_identity_key_exclamation">De ontvanger heeft geen identiteitssleutel</string>
+    <string name="VerifyIdentityActivity_scan_their_key_to_compare">Sleutel contact scannen om te vergelijken</string>
+    <string name="VerifyIdentityActivity_get_my_key_scanned">Laat mijn sleutel scannen</string>
+    <string name="VerifyIdentityActivity_warning_the_scanned_key_does_not_match_please_check_the_fingerprint_text_carefully">Let op: de gescande sleutel komt niet overeen. Controleer de vingerafdruk zorgvuldig.</string>
+    <string name="VerifyIdentityActivity_not_verified_exclamation">Niet geverifieerd</string>
+    <string name="VerifyIdentityActivity_their_key_is_correct_it_is_also_necessary_to_verify_your_key_with_them_as_well">Sleutel contact is correct. Het is ook nodig om uw sleutel door deze persoon te laten verifiëren.</string>
+    <string name="VerifyIdentityActivity_verified_exclamation">Geverifieerd</string>
+    <string name="VerifyIdentityActivity_you_don_t_have_an_identity_key_exclamation">U heeft geen identiteitssleutel</string>
+
+    <string name="VerifyKeysActivity_get_my_fingerprint_scanned">Mijn vingerafdruk laten scannen</string>
+    <string name="VerifyKeysActivity_scan_their_fingerprint">Vingerafdruk contact scannen</string>
+    <string name="VerifyKeysActivity_warning_the_scanned_key_does_not_match_please_check_the_fingerprint_text_carefully2">Let op: de gescande sleutel komt niet overeen. Controleer de vingerafdruk zorgvuldig.</string>
+    <string name="VerifyKeysActivity_not_verified_exclamation">Niet geverifieerd</string>
+    <string name="VerifyKeysActivity_their_key_is_correct_it_is_also_necessary_to_get_your_fingerprint_scanned_as_well">Sleutel contact is correct. Het is ook nodig om uw vingerafdruk te laten scannen.</string>
+    <string name="VerifyKeysActivity_verified_exclamation">Geverifieerd</string>
+
+    <string name="ViewIdentityActivity_you_do_not_have_an_identity_key">U heeft geen identiteitssleutel.</string>
+    <string name="ViewIdentityActivity_scan_to_compare">Scannen om te vergelijken</string>
+    <string name="ViewIdentityActivity_get_scanned_to_compare">Gescand worden om te vergelijken</string>
+    <string name="ViewIdentityActivity_warning_the_scanned_key_does_not_match_exclamation">Let op: de gescande sleutel komt niet overeen</string>
+    <string name="ViewIdentityActivity_not_verified_exclamation">Niet geverifieerd</string>
+    <string name="ViewIdentityActivity_the_scanned_key_matches_exclamation">De gescande sleutel komt overeen</string>
+    <string name="ViewIdentityActivity_verified_exclamation">Geverifieerd</string>
+    <string name="ViewIdentityActivity_identity_fingerprint">Identiteitsvingerafdruk</string>
+
+    <string name="KeyExchangeInitiator_initiate_despite_existing_request_question">Starten ondanks bestaand verzoek?</string>
+    <string name="KeyExchangeInitiator_youve_already_sent_a_session_initiation_request_to_this_recipient_are_you_sure">U heeft al een verzoek om een sessie te initialiseren verstuurd naar deze ontvanger, weet u zeker dat u er nog een wilt sturen? Dit maakt het eerdere verzoek ongeldig.</string>
+    <string name="KeyExchangeInitiator_send">Versturen</string>
+
+    <string name="MessageDisplayHelper_bad_encrypted_message">Verkeerd versleuteld bericht\u2026</string>
+    <string name="MessageDisplayHelper_decrypting_please_wait">Ontsleutelen\u2026</string>
+    <string name="MessageDisplayHelper_message_encrypted_for_non_existing_session">Bericht ontsleuteld voor niet-bestaande sessie\u2026</string>
+
+    <string name="MmsDatabase_connecting_to_mms_server">Verbinden met mms-server\u2026</string>
+    <string name="MmsDatabase_downloading_mms">Mms downloaden\u2026</string>
+
+    <string name="MmsDatabase_mms_pending_download">Tik om mms in te stellen om door te kunnen gaan met downloaden.</string>
+
+    <string name="MmsDatabase_mms_download_failed">Mms downloaden mislukt</string>
+    <string name="MmsDatabase_downloading">Downloaden\u2026</string>
+
+    <string name="MmsMessageRecord_decrypting_mms_please_wait">Mms ontsleutelen\u2026</string>
+    <string name="MmsMessageRecord_bad_encrypted_mms_message">Verkeerd versleuteld mms-bericht\u2026</string>
+    <string name="MmsMessageRecord_mms_message_encrypted_for_non_existing_session">Mms-bericht versleuteld voor niet-bestaande sessie\u2026</string>
+
+    <string name="MmsSender_currently_unable_to_send_your_mms_message">Momenteel niet in staat om uw mms-bericht te verzenden.</string>
+
+    <string name="ApplicationMigrationService_import_in_progress">Bezig met importeren</string>
+    <string name="ApplicationMigrationService_importing_text_messages">Tekstberichten importeren</string>
+
+    <string name="KeyCachingService_textsecure_passphrase_cached">TextSecure wachtwoord in cache</string>
+    <string name="KeyCachingService_passphrase_cached">Wachtwoord in cache</string>
+
+    <string name="MessageNotifier_d_new_messages">%d nieuwe berichten</string>
+    <string name="MessageNotifier_most_recent_from_s">Meest recente van: %s</string>
+    <string name="MessageNotifier_encrypted_message">Versleuteld bericht\u2026</string>
+    <string name="MessageNotifier_no_subject">(Geen onderwerp)</string>
+    <string name="MessageNotifier_message_delivery_failed">Berichtaflevering mislukt.</string>
+    <string name="MessageNotifier_failed_to_deliver_message">Bericht is niet afgeleverd.</string>
+    <string name="MessageNotifier_error_delivering_message">Kan bericht niet afleveren.</string>
+    <string name="MessageNotifier_mark_all_as_read">Alles als gelezen markeren</string>
+    <string name="MessageNotifier_mark_as_read">Als gelezen markeren</string>
+
+    <string name="ViewLocalIdentityActivity_regenerating">Opnieuw aanmaken\u2026</string>
+    <string name="ViewLocalIdentityActivity_regenerating_identity_key">Identiteitssleutel opnieuw aanmaken\u2026</string>
+    <string name="ViewLocalIdentityActivity_regenerated">Opnieuw aangemaakt</string>
+    <string name="ViewLocalIdentityActivity_reset_identity_key">Identiteitssleutel opnieuw instellen?</string>
+    <string name="ViewLocalIdentityActivity_by_regenerating_your_identity_key_your_existing_contacts_will_receive_warnings">Let op: door uw identiteitssleutel opnieuw aan te maken zal uw huidige identiteitssleutel definitief verloren gaan en uw huidige contacten zullen waarschuwingen krijgen wanneer zij een nieuwe beveiligde sessie met u starten.\nWeet u zeker dat u door wilt gaan?</string>
+    <string name="ViewLocalIdentityActivity_cancel">Annuleren</string>
+    <string name="ViewLocalIdentityActivity_continue">Doorgaan</string>
+
+    <string name="SmsReceiver_currently_unable_to_send_your_sms_message">Uw sms-bericht kan nu niet worden verzonden. Er zal een nieuwe poging worden gedaan wanneer de service weer beschikbaar is.</string>
+
+    <string name="auto_initiate_activity__you_have_received_a_message_from_someone_who_supports_textsecure_encrypted_sessions_would_you_like_to_initiate_a_secure_session">U heeft een bericht ontvangen van iemand die versleutelde TextSecure-sessies ondersteunt. Wilt u een beveiligde sessie starten?</string>
+    <string name="auto_initiate_activity__initiate_exchange">Uitwisseling starten</string>
+
+    <string name="change_passphrase_activity__old_passphrase">Oud wachtwoord:</string>
+    <string name="change_passphrase_activity__new_passphrase">Nieuw wachtwoord:</string>
+    <string name="change_passphrase_activity__repeat_new_passphrase">Nieuw wachtwoord herhalen:</string>
+
+    <string name="contact_selection_group_activity__no_contacts">Geen contacten.</string>
+
+    <string name="ContactSelectionlistFragment_select_for">Selecteren voor</string>
+
+    <string name="contact_selection_recent_activity__no_recent_calls">Geen recente gesprekken.</string>
+
+    <string name="conversation_activity__type_message">Bericht opstellen</string>
+    <string name="conversation_activity__send">Verzenden</string>
+    <string name="conversation_activity__remove">Verwijderen</string>
+
+    <string name="conversation_item_sent__download">Downloaden</string>
+    <string name="conversation_item_sent__downloading">Downloaden</string>
+
+    <string name="conversation_item_received__download">Downloaden</string>
+    <string name="conversation_item_received__downloading">Downloaden</string>
+
+    <string name="conversation_fragment_cab__batch_selection_mode">Meerdere tegelijk selecteren</string>
+
+    <string name="country_selection_fragment__loading_countries">Landen laden\u2026</string>
+    <string name="country_selection_fragment__search">Zoeken</string>
+
+    <string name="create_passphrase_activity__please_choose_a_passphrase_that_will_be_used_to_locally_encrypt_your_data_this_should_be_a_strong_passphrase">Kies een wachtwoord voor het lokaal versleutelen van uw gegevens. Een sterk wachtwoord wordt aangeraden.</string>
+    <string name="create_passphrase_activity__passphrase">Wachtwoord:</string>
+    <string name="create_passphrase_activity__repeat">Herhalen:</string>
+    <string name="create_passphrase_activity__continue">Doorgaan</string>
+    <string name="create_passphrase_activity__generating_secrets">GEHEIMEN AANMAKEN\u2026</string>
+
+    <string name="database_migration_activity__would_you_like_to_import_your_existing_text_messages">Wilt u uw huidige tekstberichtendatabase importeren naar de versleutelde database van TextSecure?</string>
+    <string name="database_migration_activity__the_default_system_database_will_not_be_modified">De standaardsysteemdatabase zal niet gewijzigd of aangepast worden.</string>
+    <string name="database_migration_activity__skip">Overslaan</string>
+    <string name="database_migration_activity__import">Importeren</string>
+    <string name="database_migration_activity__this_could_take_a_moment_please_be_patient">Dit kan enige tijd in beslag nemen. Een ogenblik geduld, u krijgt een melding wanneer het importeren is voltooid.</string>
+    <string name="database_migration_activity__importing">IMPORTEREN\u2026</string>
+
+    <string name="database_upgrade_activity__updating_database">Database updaten\u2026</string>
+    <string name="export_fragment__export_encrypted_backup">Versleutelde back-up exporteren</string>
+    <string name="export_fragment__export_an_encrypted_backup_to_the_sd_card">Versleutelde back-up naar SD-kaart exporteren.</string>
+    <string name="export_fragment__export_plaintext_backup">Onversleutelde back-up exporteren</string>
+    <string name="export_fragment__export_a_plaintext_backup_compatible_with">Onversleutelde back-up voor gebruik met \'SMSBackup And Restore\' naar SD-kaart exporteren.</string>
+    <string name="import_fragment__import_system_sms_database">Sms-berichten uit de systeemdatabase importeren</string>
+    <string name="import_fragment__import_the_database_from_the_default_system">Database uit de standaard berichtenapp van het systeem importeren.</string>
+    <string name="import_fragment__import_encrypted_backup">Versleutelde back-up importeren</string>
+    <string name="import_fragment__restore_a_previously_exported_encrypted_textsecure_backup">Versleutelde TextSecure back-up herstellen.</string>
+    <string name="import_fragment__import_plaintext_backup">Onversleutelde back-up importeren</string>
+    <string name="import_fragment__import_a_plaintext_backup_file">Onversleutelde back-up importeren, bijvoorbeeld van \'SMSBackup And Restore\'.</string>
+    <string name="local_identity__regenerate_key">Sleutel opnieuw aanmaken</string>
+
+    <string name="mms_preferences_activity__manual_mms_settings_are_required">Handmatige mms-instellingen zijn vereist voor dit apparaat.</string>
+
+    <string name="prompt_passphrase_activity__textsecure_passphrase">TEXTSECURE WACHTWOORD</string>
+    <string name="prompt_passphrase_activity__unlock">Ontgrendelen</string>
+
+    <string name="prompt_mms_activity__textsecure_requires_mms_settings_to_deliver_media_and_group_messages">TextSecure vereist mms-instellingen om media en groepsberichten af te leveren via uw provider. Uw apparaat maakt deze informatie niet beschikbaar, wat soms gebeurt bij geblokkeerde apparaten en andere beperkende configuraties.</string>
+    <string name="prompt_mms_activity__to_send_media_and_group_messages_click_ok">Om media en groepsberichten te versturen, tikt u op \'OK\' en vult u de gevraagde instellingen aan. De mms-instellingen van uw provider kunnen doorgaans gevonden worden door te zoeken op \'uw provider + APN\'. Dit hoeft u maar één keer te doen.</string>
+    <string name="prompt_mms_activity__mmsc_url_required">MMSC-URL (VEREIST):</string>
+    <string name="prompt_mms_activity__mms_proxy_host_optional">MMS-PROXY HOST (OPTIONEEL):</string>
+    <string name="prompt_mms_activity__mms_proxy_port_optional">MMS-PROXY POORT (OPTIONEEL):</string>
+
+    <string name="receive_key_activity__complete">Voltooid</string>
+
+    <string name="registration_activity__textsecure_can_use_the_data_channel_to_avoid_sms_charges_when_communicating_with_other_textsecure_users">TextSecure kan uw gegevensverbinding gebruiken om sms-kosten te vermijden tijdens communicatie met andere TextSecure-gebruikers. Verifiëer uw landcode en telefoonnummer om dit in te schakelen.</string>
+    <string name="registration_activity__your_country">UW LAND</string>
+    <string name="registration_activity__your_country_code_and_phone_number">UW LAND EN TELEFOONNUMMER</string>
+    <string name="registration_activity__phone_number">TELEFOONNUMMER</string>
+    <string name="registration_activity__register">Registeren</string>
+
+    <string name="registration_problems__some_possible_problems_include">Enkele mogelijke problemen:</string>
+    <string name="registration_problems__sms_interceptors">Onderscheppen van sms-berichten.</string>
+    <string name="registration_problems__some_third_party_text_messaging_clients_such_as_handcent">Enkele berichten-apps van derde partijen, zoals Handcent en GoSMS, gedragen zich onjuist en onderscheppen alle inkomende sms-berichten. Controleer of u een bericht heeft ontvangen dat begint met \'Your TextSecure verification code:\'. Indien dat het geval is, moet u uw berichten-app instellen om tekstberichten door te geven.</string>
+    <string name="registration_problems__incorrect_number">Onjuist nummer.</string>
+    <string name="registration_problems__please_checkt_to_make_sure_you_entered_your_number_correctly">Controleer of uw nummer correct is ingevoerd en dat het in de juiste notatie voor uw regio is opgemaakt.</string>
+    <string name="registration_problems__google_voice">Google Voice.</string>
+    <string name="registration_problems__textsecure_will_not_work_with_google_voice_numbers">TextSecure werkt niet met Google Voice-nummers.</string>
+
+    <string name="registration_progress_activity__voice_verification">Geluidsverificatie</string>
+    <string name="registration_progress_activity__textsecure_can_also_call_you_to_verify_your_number">TextSecure kan u ook bellen om uw nummer te verifiëren. Tik op \'Bel mij\' en voer hieronder het zes-cijferige nummer in dat u hoort.</string>
+    <string name="registration_progress_activity__verify">Verifiëren</string>
+    <string name="registration_progress_activity__call_me">Bel mij</string>
+    <string name="registration_progress_activity__edit_number">Nummer wijzigen</string>
+    <string name="registration_progress_activity__connectivity_error">Verbindingsfout.</string>
+    <string name="registration_progress_activity__textsecure_was_unable_to_connect_to_the_push_service">TextSecure kan geen verbinding maken met de push-dienst.</string>
+    <string name="registration_progress_activity__some_possible_problems_include">Enkele mogelijke problemen:</string>
+    <string name="registration_progress_activity__no_network_connectivity">Geen internetverbinding.</string>
+    <string name="registration_progress_activity__your_device_needs_network_connectivity">Een internetverbinding is vereist om deze functie van TextSecure te gebruiken. Controleer of u een mobiele gegevensverbinding of een wifi-verbinding heeft.</string>
+    <string name="registration_progress_activity__restrictive_firewall">Beperkende firewall.</string>
+    <string name="registration_progress_activity__if_you_are_connected_via_wifi_its_possible_that_there_is_a_firewall">Bij een wifi-verbinding is het mogelijk dat een firewall de toegang tot de TextSecure-server verhindert. Probeer een ander netwerk of uw mobiele gegevensverbinding.</string>
+    <string name="registration_progress_activity__textsecure_will_now_automatically_verify_your_number_with_a_confirmation_sms_message">TextSecure verifieert nu uw nummer met een bevestigingsbericht.</string>
+    <string name="registration_progress_activity__connecting">Verbinding maken\u2026</string>
+    <string name="registration_progress_activity__waiting_for_sms_verification">Wachten op sms-verificatie\u2026</string>
+    <string name="registration_progress_activity__registering_with_server">Registreren bij server\u2026</string>
+    <string name="registration_progress_activity__this_couild_take_a_moment_please_be_patient">Dit kan enige tijd in beslag nemen. Een ogenblik geduld, u krijgt een melding wanneer de verificatie is voltooid.</string>
+    <string name="registration_progress_activity__textsecure_timed_out_while_waiting_for_a_verification_sms_message">Time-out opgetreden tijdens het wachten op verificatiebericht.</string>
+    <string name="registration_progress_activity__sms_verification_failed">Sms-verificatie mislukt.</string>
+    <string name="registration_progress_activity__generating_keys">Sleutels aanmaken\u2026</string>
+
+    <string name="recipients_panel__to">Aan</string>
+
+    <string name="review_identities__you_don_t_currently_have_any_identity_keys_in_your_trust_database">U heeft momenteel geen identiteitssleutels in uw vertrouwensdatabase.</string>
+
+    <string name="verify_identity_activity__their_identity_they_read">Identiteit contact (contact leest):</string>
+    <string name="verify_identity_activity__your_identity_you_read">Uw identiteit (u leest):</string>
+
+    <string name="verify_import_identity_activity__identity_name_n">Identiteitsnaam:\\n</string>
+    <string name="verify_import_identity_activity__imported_identity_n">Geïmporteerde identiteit:\\n</string>
+    <string name="verify_import_identity_activity__verified">Geverifieerd</string>
+    <string name="verify_import_identity_activity__compare">Vergelijken</string>
+
+    <string name="verify_keys_activity__they_read_this">Contact leest dit:</string>
+    <string name="verify_keys_activity__you_read_this">U leest dit:</string>
+
+    <string name="AndroidManifest__create_passphrase">Wachtwoord aanmaken</string>
+    <string name="AndroidManifest__enter_passphrase">Wachtwoord invoeren</string>
+    <string name="AndroidManifest__select_contacts">Contacten selecteren</string>
+    <string name="AndroidManifest__textsecure_detected">TextSecure gedetecteerd</string>
+    <string name="AndroidManifest__public_identity_key">Publieke identiteitssleutel</string>
+    <string name="AndroidManifest__change_passphrase">Wachtwoord aanpassen</string>
+    <string name="AndroidManifest__verify_session">Sessie verifiëren</string>
+    <string name="AndroidManifest__verify_identity">Identiteit verifiëren</string>
+    <string name="AndroidManifest__manage_identity_keys">Identiteitssleutels beheren</string>
+    <string name="AndroidManifest__complete_key_exchange">Sleuteluitwisseling voltooien</string>
+
+    <string name="arrays__import_export">Importeren/exporteren</string>
+    <string name="arrays__my_identity_key">Mijn identiteitssleutel</string>
+    <string name="arrays__contact_keys">Sleutels van contacten</string>
+
+    <string name="preferences__general">Algemeen</string>
+    <string name="preferences__pref_all_sms_title">Voor alle sms</string>
+    <string name="preferences__pref_all_mms_title">Voor alle mms</string>
+    <string name="preferences__use_textsecure_for_viewing_and_storing_all_incoming_text_messages">TextSecure gebruiken voor het bekijken en opslaan van alle inkomende tekstberichten</string>
+    <string name="preferences__use_textsecure_for_viewing_and_storing_all_incoming_multimedia_messages">TextSecure gebruiken voor het bekijken en opslaan van alle inkomende multimediaberichten</string>
+    <string name="preferences__pref_enter_sends_title">Enter verstuurt</string>
+    <string name="preferences__pressing_the_enter_key_will_send_text_messages">De \'Enter\'-toets gebruiken voor verzenden tekstberichten</string>
+    <string name="preferences__display_settings">Weergave-instellingen</string>
+    <string name="preferences__choose_identity">Identiteit kiezen</string>
+    <string name="preferences__choose_your_contact_entry_from_the_contacts_list">Kies uw contactinformatie uit de contactenlijst.</string>
+    <string name="preferences__change_passphrase">Wachtwoord aanpassen</string>
+    <string name="preferences__change_my_passphrase">Mijn wachtwoord aanpassen</string>
+    <string name="preferences__complete_key_exchanges">Sleuteluitwisselingen voltooien</string>
+    <string name="preferences__disable_passphrase">Wachtwoord uitschakelen</string>
+    <string name="preferences__disable_local_encryption_of_messages_and_keys">Lokale versleuteling van berichten en sleutels uitschakelen</string>
+    <string name="preferences__automatically_complete_key_exchanges_for_new_sessions_or_for_existing_sessions_with_the_same_identity_key">Automatisch sleuteluitwisselingen voltooien voor nieuwe sessies of voor bestaande sessies met dezelfde identiteitssleutel</string>
+    <string name="preferences__forget_passphrase_from_memory_after_some_interval">Wachtwoord uit geheugen wissen na een bepaalde tijd</string>
+    <string name="preferences__timeout_passphrase">Time-out wachtwoord</string>
+    <string name="preferences__pref_timeout_interval_dialogtitle">Time-out wachtwoord selecteren</string>
+    <string name="preferences__pref_timeout_interval_title">Time-out interval</string>
+    <string name="preferences__the_amount_of_time_to_wait_before_forgetting_passphrase">Tijd waarna wachtwoord uit geheugen wordt gewist</string>
+    <string name="preferences__identity_key_settings">Identiteitssleutels</string>
+    <string name="preferences__view_my_identity_key">Mijn identiteitssleutel bekijken</string>
+    <string name="preferences__manage_identity_keys">Identiteitssleutels beheren</string>
+    <string name="preferences__manage_configured_identity_keys">Ingestelde identiteitssleutels beheren</string>
+    <string name="preferences__notifications">Meldingen</string>
+    <string name="preferences__display_message_notifications_in_status_bar">Meldingen weergeven in statusbalk</string>
+    <string name="preferences__led_color">Kleur led</string>
+    <string name="preferences__change_notification_led_color">Kleur meldingsled wijzigen</string>
+    <string name="preferences__pref_led_blink_title">Knipperpatroon led</string>
+    <string name="preferences__change_notification_blink_pattern">Knipperpatroon meldingsled wijzigen</string>
+    <string name="preferences__pref_led_blink_dialogtitle">Knipperpatroon selecteren</string>
+    <string name="preferences__select_led_color">Kleur selecteren</string>
+
+    <string name="preferences__sound">Geluid</string>
+    <string name="preferences__inthread_notifications">Meldingen tijdens gesprek</string>
+    <string name="preferences__play_inthread_notifications">Meldingsgeluid afspelen tijdens bekijken van actief gesprek.</string>
+
+    <string name="preferences__vibrate">Trillen</string>
+    <string name="preferences__also_vibrate_when_notified">Trillen bij meldingen</string>
+    <string name="preferences__minutes">minuten</string>
+    <string name="preferences__hours">uren</string>
+    <string name="preferences__green">Groen</string>
+    <string name="preferences__red">Rood</string>
+    <string name="preferences__blue">Blauw</string>
+    <string name="preferences__orange">Oranje</string>
+    <string name="preferences__cyan">Cyaan</string>
+    <string name="preferences__magenta">Magenta</string>
+    <string name="preferences__fast">Snel</string>
+    <string name="preferences__normal">Normaal</string>
+    <string name="preferences__slow">Langzaam</string>
+    <string name="preferences__custom">Aangepast</string>
+    <string name="preferences__advanced">Geavanceerd</string>
+    <string name="preferences__passphrase">Wachtwoord</string>
+    <string name="preferences__advanced_mms_access_point_names">Geavanceerde MMSC-instellingen</string>
+
+    <string name="preferences__enable_manual_mms">Handmatige mms inschakelen</string>
+    <string name="preferences__override_system_mms_settings">Systeeminstellingen mms overschrijven met onderstaande informatie.</string>
+
+    <string name="preferences__mmsc_url_required">MMSC-url (vereist)</string>
+    <string name="preferences__mms_proxy_host_optional">Mms-proxy host (optioneel)</string>
+    <string name="preferences__mms_proxy_port_optional">Mms-proxy poort (optioneel)</string>
+    <string name="preferences__request_a_delivery_report_for_each_sms_message_you_send">Ontvangstbevestiging vragen voor elk verzonden sms-bericht</string>
+    <string name="preferences__sms_delivery_reports">Ontvangstbevestigingen</string>
+    <string name="preferences__automatically_delete_older_messages_once_a_conversation_thread_exceeds_a_specified_length">Automatisch oudere berichten verwijderen wanneer een gesprek meer dan een bepaald aantal berichten bevat</string>
+    <string name="preferences__delete_old_messages">Oude berichten verwijderen</string>
+    <string name="preferences__storage">Opslag</string>
+    <string name="preferences__conversation_length_limit">Limiet gesprekslengte</string>
+    <string name="preferences__trim_all_threads_now">Oudere berichten nu verwijderen</string>
+    <string name="preferences__scan_through_all_conversation_threads_and_enforce_conversation_length_limits">Alle gesprekken scannen en de maximale gesprekslengte toepassen</string>
+    <string name="preferences__light_theme">Licht thema</string>
+    <string name="preferences__dark_theme">Donker thema</string>
+    <string name="preferences__appearance">Uiterlijk</string>
+    <string name="preferences__theme">Thema</string>
+    <string name="preferences__default">Standaard</string>
+    <string name="preferences__language">Taal</string>
+
+    <string name="preferences__use_data_channel">Gegevensverbinding gebruiken</string>
+    <string name="preferences__use_the_data_channel_for_communication_with_other_textsecure_users">Gegevensverbinding gebuiken voor communicatie met andere TextSecure-gebruikers</string>
+
+    <string name="contact_selection_list__menu_select_all">Alles selecteren</string>
+    <string name="contact_selection_list__menu_unselect_all">Alles deselecteren</string>
+
+    <string name="contact_selection__menu_finished">Voltooid</string>
+
+    <string name="conversation_button_context__menu_send_unencrypted">Onversleuteld verzenden</string>
+
+    <string name="conversation_callable__menu_call">Bellen</string>
+
+    <string name="conversation_context__menu_message_details">Berichtdetails</string>
+    <string name="conversation_context__menu_copy_text">Tekst kopiëren</string>
+    <string name="conversation_context__menu_delete_message">Bericht verwijderen</string>
+    <string name="conversation_context__menu_forward_message">Bericht doorsturen</string>
+
+    <string name="conversation_context__menu_resend_message">Bericht opnieuw verzenden</string>
+
+    <string name="conversation_insecure__menu_start_secure_session">Beveiligde sessie starten</string>
+
+    <string name="conversation_list_batch__menu_delete_selected">Geselecteerde verwijderen</string>
+    <string name="conversation_list_batch__menu_select_all">Alles selecteren</string>
+
+    <string name="conversation_list__menu_search">Zoeken</string>
+
+    <string name="conversation_secure_verified__menu_security">Veiligheid</string>
+
+    <string name="conversation_secure_verified__menu_no_identity">Geen identiteit beschikbaar</string>
+
+    <string name="conversation_secure_verified__menu_verify_recipient">Ontvanger verifiëren</string>
+    <string name="conversation_secure_verified__menu_abort_secure_session">Beveiligde sessie stoppen</string>
+
+    <string name="conversation__menu_add_attachment">Bijlage toevoegen</string>
+
+    <string name="conversation__menu_add_contact_info">Contactinformatie toevoegen</string>
+
+    <string name="conversation__menu_delete_thread">Gehele gesprek verwijderen</string>
+
+    <string name="convesation_group_options__recipients_list">Lijst met ontvangers</string>
+    <string name="conversation_group_options__delivery">Verzending</string>
+    <string name="conversation_group_options__conversation">Gesprek</string>
+    <string name="conversation_group_options__broadcast">Uitzenden</string>
+
+    <string name="key_scanning__menu_compare">Vergelijken</string>
+    <string name="key_scanning__menu_get_scanned_to_compare">Gescand worden om te vergelijken</string>
+    <string name="key_scanning__menu_scan_to_compare">Scannen om te vergelijken</string>
+
+    <string name="text_secure_locked__menu_unlock">Ontgrendelen</string>
+
+    <string name="text_secure_normal__menu_new_message">Nieuw bericht</string>
+    <string name="text_secure_normal__menu_settings">Instellingen</string>
+    <string name="text_secure_normal__menu_clear_passphrase">Vergrendelen</string>
+    <string name="text_secure_normal__mark_all_as_read">Alles markeren als gelezen</string>
+
+    <string name="verify_keys__menu_verified">Geverifieerd</string>
 </resources>
