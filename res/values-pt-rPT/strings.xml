@@ -122,10 +122,6 @@
   <string name="PassphraseCreateActivity_you_must_specify_a_password">Você deve especificar uma senha</string>
   <!--PassphrasePromptActivity-->
   <string name="PassphrasePromptActivity_invalid_passphrase_exclamation">Frase-chave inválida!</string>
-  <!--PromptApnActivity-->
-  <string name="PromptApnActivity_you_must_specify_an_mmsc_url_for_your_carrier">Você deve especificar a URL do MMSC da sua operadora.</string>
-  <string name="PromptApnActivity_mms_settings_updated">Configurações MMS Atualizadas</string>
-  <string name="PromptApnActivity_you_can_modify_these_values_from_the_textsecure_settings_menu_at_any_time_">Você pode modificar estes valores a qualquer momento nas configurações do TextSecure.</string>
   <!--ReceiveKeyActivity-->
   <string name="ReceiveKeyActivity_the_signature_on_this_key_exchange_is_different">A\n        assinatura nesta troca de chaves é diferente da que você recebeu anteriormente deste\n        contato. Isto pode significar que alguém está tentando interceptar sua comunicação, ou\n        que este contato reinstalou o TextSecure e agora tem uma nova chave de identidade.\n    </string>
   <string name="ReceiveKeyActivity_you_may_wish_to_verify_this_contact">Talvez você queira verificar\n        este contato.\n    </string>
@@ -257,12 +253,6 @@
   <!--prompt_passphrase_activity-->
   <string name="prompt_passphrase_activity__textsecure_passphrase">Palavra-chave do TextSecure</string>
   <string name="prompt_passphrase_activity__unlock">Desbloquear</string>
-  <!--prompt_apn_activity-->
-  <string name="prompt_apn_activity__textsecure_requires_apn_settings_to_deliver_media_messages_via_your_wireless_carrier">O TextSecure precisa das configurações de APN para entregar mensagens MMS via sua operadora móvel. Seu aparelho não disponibiliza esta informação, o que pode ocorrer em aparelhos bloqueados ou com configurações restritivas.</string>
-  <string name="prompt_apn_activity__to_send_media_messages_please_complete_the_necessary_apn_information_below">Para enviar mensagens MMS, complete as informações de APN abaixo. Os valores para sua operadora normalmente podem ser localizados procurando por \'&amp;lt;operadora&amp;gt; APN\'. Você só precisará fazer isso uma vez.</string>
-  <string name="prompt_apn_activity__mmsc_url_required">URL MMSC (NECESSÁRIO):</string>
-  <string name="prompt_apn_activity__mms_proxy_host_optional">PROXY MMS (OPCIONAL):</string>
-  <string name="prompt_apn_activity__mms_proxy_port_optional">PORTA DO PROXY MMS (OPCIONAL):</string>
   <!--receive_key_activity-->
   <string name="receive_key_activity__complete">Concluído</string>
   <!--recipients_panel-->
@@ -349,8 +339,6 @@
   <string name="preferences__advanced">Avançado</string>
   <string name="preferences__passphrase">Frase-chave</string>
   <string name="preferences__advanced_mms_access_point_names">MMSC Reserva</string>
-  <string name="preferences__enable_fallback_mmsc">Habilitar MMSC de reseva</string>
-  <string name="preferences__use_mmsc_information_configured_here_when_system_apn_information_is_unavailable">Usar esta informação de MMSC quando APN do sistema estiver indisponível.</string>
   <string name="preferences__mmsc_url_required">URL do MMSC (Necessário)</string>
   <string name="preferences__mms_proxy_host_optional">Proxy MMS (Opcional)</string>
   <string name="preferences__mms_proxy_port_optional">Porta do Proxy MMS (Opcional)</string>
@@ -395,7 +383,6 @@
   <string name="conversation_list__menu_search">Procurar</string>
   <!--conversation_secure_verified-->
   <string name="conversation_secure_verified__menu_security">Segurança</string>
-  <string name="conversation_secure_verified__menu_verify_session">Verificar sessão</string>
   <string name="conversation_secure_verified__menu_verify_recipient">Verificar destinatário</string>
   <string name="conversation_secure_verified__menu_abort_secure_session">Abortar sessão segura</string>
   <!--conversation-->
