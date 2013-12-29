@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<!--
+     Copyright (C) 2013 The CyanogenMod Project
 
-  <string-array name="language_entries">
+     This program is free software: you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation, either version 3 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources>
+  <string-array name="language_entries" translatable="false">
       <item>@string/preferences__default</item>
       <item>English</item>
       <item>Arabic العربية</item>
@@ -29,7 +44,7 @@
       <item>Tibetan བོད་སྐད།</item>
   </string-array>
 
-  <string-array name="language_values">
+  <string-array name="language_values" translatable="false">
       <item>zz</item>
       <item>en</item>
       <item>ar</item>
@@ -57,12 +72,12 @@
       <item>bo</item>
   </string-array>
 
-  <string-array name="minutes_hours">
+  <string-array name="minutes_hours" translatable="false">
   	<item>@string/preferences__minutes</item>
   	<item>@string/preferences__hours</item>
   </string-array>
 
-  <string-array name="pref_theme_entries">
+  <string-array name="pref_theme_entries" translatable="false">
       <item>@string/preferences__light_theme</item>
       <item>@string/preferences__dark_theme</item>
   </string-array>
@@ -72,7 +87,7 @@
       <item>dark</item>
   </string-array>
 
-  <string-array name="pref_led_color_entries">
+  <string-array name="pref_led_color_entries" translatable="false">
     <item>@string/preferences__green</item>
     <item>@string/preferences__red</item>
     <item>@string/preferences__blue</item>
@@ -91,7 +106,7 @@
     <item>magenta</item>
   </string-array>
   
-  <string-array name="pref_led_blink_pattern_entries">
+  <string-array name="pref_led_blink_pattern_entries" translatable="false">
     <item>@string/preferences__fast</item>
     <item>@string/preferences__normal</item>
     <item>@string/preferences__slow</item>
@@ -105,7 +120,7 @@
     <item>custom</item>
   </string-array>
 
-  <string-array name="navigation_drawer_text">
+  <string-array name="navigation_drawer_text" translatable="false">
     <item>@string/arrays__import_export</item>
     <item>@string/arrays__my_identity_key</item>
     <item>@string/arrays__contact_keys</item>
@@ -117,13 +132,13 @@
     <item>contact_identity_keys</item>
   </string-array>
 
-  <string-array name="navigation_drawer_icons_light">
+  <string-array name="navigation_drawer_icons_light" translatable="false">
     <item>@drawable/import_export_light</item>
     <item>@drawable/my_identity_light</item>
     <item>@drawable/contacts_identities_light</item>
   </string-array>
 
-  <string-array name="navigation_drawer_icons_dark">
+  <string-array name="navigation_drawer_icons_dark" translatable="false">
     <item>@drawable/import_export_dark</item>
     <item>@drawable/my_identity_dark</item>
     <item>@drawable/contacts_identities_dark</item>
