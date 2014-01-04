@@ -17,8 +17,6 @@
 -->
 <resources>
     <string name="app_name">TextSecure</string>
-    <string name="yes">Ja</string>
-    <string name="no">Nee</string>
     <string name="delete">Verwijderen</string>
 
     <string name="ApplicationPreferencesActivity_currently_s">Momenteel: %s</string>

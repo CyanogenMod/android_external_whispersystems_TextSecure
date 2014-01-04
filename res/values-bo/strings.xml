@@ -1,8 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <string name="app_name">གཡག་འཕྲིན། </string>
-  <string name="yes">ཡིན།</string>
-  <string name="no">མིན། </string>
   <string name="delete">གསུབ། </string>
   <!--ApplicationPreferencesActivity-->
   <string name="ApplicationPreferencesActivity_currently_s">ད་ལྟ།:%s</string>
