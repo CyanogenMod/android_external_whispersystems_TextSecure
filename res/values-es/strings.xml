@@ -283,8 +283,6 @@
     <string name="prompt_mms_activity__mmsc_url_required">MMSC URL (requerido):</string>
     <string name="prompt_mms_activity__mms_proxy_host_optional">MMS Proxy Host (opcional):</string>
     <string name="prompt_mms_activity__mms_proxy_port_optional">Puerto de Proxy MMS (opcional):</string>
-    <string name="prompt_passphrase_activity__textsecure_passphrase">Contraseña de TextSecure</string>
-    <string name="prompt_passphrase_activity__unlock">Desbloquear</string>
     <string name="receive_key_activity__complete">Completo</string>
     <string name="registration_activity__textsecure_can_use_the_data_channel_to_avoid_sms_charges_when_communicating_with_other_textsecure_users">TextSecure puede usar un canal de datos para evitar cargos de SMS en las comunicaciones con otros usuarios de TextSecure. Para activar esta característica, por favor, verifica tu país y número de teléfono.</string>
     <string name="registration_activity__your_country">TU PAÍS</string>
