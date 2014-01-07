@@ -16,6 +16,9 @@
   <string name="ApplicationPreferencesActivity_disable_storage_encryption">Отключить шифрование базы?</string>
   <string name="ApplicationPreferencesActivity_warning_this_will_disable_storage_encryption_for_all_messages">\nВнимание, этим вы отключите шифрование при хранении всех своих сообщений и ключей. При общении шифрование продолжит работать, однако любой, кто имеет физический доступ к вашему устройству, сможет их прочитать.</string>
   <string name="ApplicationPreferencesActivity_disable">Отключить</string>
+  <string name="ApplicationPreferencesActivity_unregistering">Удаление регистрации...</string>
+  <string name="ApplicationPreferencesActivity_unregistering_for_data_based_communication">Удаление регистрации для обмена сообщениями через Интернет</string>
+  <string name="ApplicationPreferencesActivity_error_connecting_to_server">Ошибка подключения к серверу!</string>
   <!--AttachmentTypeSelectorAdapter-->
   <string name="AttachmentTypeSelectorAdapter_picture">Изображение</string>
   <string name="AttachmentTypeSelectorAdapter_video">Видео</string>
@@ -45,6 +48,7 @@
   <string name="ConversationActivity_delete_thread_confirmation">Подтвердите удаление разговора</string>
   <string name="ConversationActivity_are_you_sure_that_you_want_to_permanently_delete_this_conversation_question">Вы уверены, что хотите навсегда удалить этот разговор?</string>
   <string name="ConversationActivity_add_attachment">Добавить вложение</string>
+  <string name="ConversationActivity_select_contact_info">Выберите контакт</string>
   <string name="ConversationActivity_compose_message">Написать сообщение</string>
   <string name="ConversationActivity_sorry_there_was_an_error_setting_your_attachment">Извините, произошла ошибка при обработке вложения.</string>
   <string name="ConversationActivity_sorry_the_selected_video_exceeds_message_size_restrictions">Извините, выбранный видео-файл больше максимального размера сообщения.</string>
@@ -112,6 +116,7 @@
   <string name="MmsDownloader_no_connectivity_available_for_mms_download_try_again_later">Нет подключения, через которое можно скачать MMS; попробуйте позже ...</string>
   <string name="MmsDownloader_error_storing_mms">Ошибка при сохранении MMS!</string>
   <string name="MmsDownloader_error_connecting_to_mms_provider">Ошибка подключения к провайдеру MMS...</string>
+  <string name="MmsDownloader_error_reading_mms_settings">Ошибка чтения настроек провайдера MMS...</string>
   <!--NotificationMmsMessageRecord-->
   <string name="NotificationMmsMessageRecord_multimedia_message">MMS-сообщение</string>
   <!--PassphraseChangeActivity-->
@@ -122,14 +127,60 @@
   <string name="PassphraseCreateActivity_you_must_specify_a_password">Необходимо указать пароль</string>
   <!--PassphrasePromptActivity-->
   <string name="PassphrasePromptActivity_invalid_passphrase_exclamation">Неверная парольная фраза!</string>
-  <!--PromptApnActivity-->
-  <string name="PromptApnActivity_you_must_specify_an_mmsc_url_for_your_carrier">Вы должны указать адрес MMS-центра вашего оператора.</string>
-  <string name="PromptApnActivity_mms_settings_updated">Настройки MMS обновлены</string>
-  <string name="PromptApnActivity_you_can_modify_these_values_from_the_textsecure_settings_menu_at_any_time_">Вы можете в любое время изменить эти значения в настройках TextSecure.</string>
+  <!-- PromptMmsActivity -->
+  <string name="PromptMmsActivity_you_must_specify_an_mmsc_url_for_your_carrier">Вы должны указать адрес MMS-центра вашего оператора.</string>
+  <string name="PromptMmsActivity_mms_settings_updated">Настройки MMS обновлены</string>
+  <string name="PromptMmsActivity_you_can_modify_these_values_from_the_textsecure_settings_menu_at_any_time_">Вы можете в любое время изменить эти значения в настройках TextSecure.</string>
   <!--ReceiveKeyActivity-->
   <string name="ReceiveKeyActivity_the_signature_on_this_key_exchange_is_different">Подпись, полученная сейчас при обмене ключами, отличается от той, которой собеседник подписывался ранее. Это может означать, что кто-то пытается перехватить вашу переписку или что ваш собеседник переустановил TextSecure, и теперь у него новый личный ключ.</string>
   <string name="ReceiveKeyActivity_you_may_wish_to_verify_this_contact">Возможно, вы захотите перепроверить этого собеседника.</string>
   <string name="ReceiveKeyActivity_the_signature_on_this_key_exchange_is_trusted_but">Подпись в этом обмене ключами является доверенной, но вы отключили в настройках автоматическое выполнение обменов.</string>
+  <string name="ReceiveKeyActivity_processing">Обработка</string>
+  <string name="ReceiveKeyActivity_processing_key_exchange">Выполняется обмен ключами…</string>
+  <!-- RegistrationActivity -->
+  <string name="RegistrationActivity_connect_with_textsecure">Регистрация в службе TextSecure</string>
+  <string name="RegistrationActivity_select_your_country">Выберите страну</string>
+  <string name="RegistrationActivity_you_must_specify_your_country_code">Необходимо указать код страны</string>
+  <string name="RegistrationActivity_you_must_specify_your_phone_number">Необходимо ввести номер телефона</string>
+  <string name="RegistrationActivity_invalid_number">Неверный номер</string>
+  <string name="RegistrationActivity_the_number_you_specified_s_is_invalid">Введённый вами номер телефона (%s) неправилен.</string>
+  <string name="RegistrationActivity_unsupported">Не поддерживается</string>
+  <string name="RegistrationActivity_sorry_this_device_is_not_supported_for_data_messaging">Извините, данное устройство не поддерживает обмен сообщениями через Интернет. На устройствах с Android версии до 4.0 должен быть настроен аккаунт Google. На устройствах с более новой версией Android учётная запись Google не требуется, но необходимо наличие установленного Play Маркета.</string>
+  <string name="RegistrationActivity_we_will_now_verify_that_the_following_number_is_associated_with_your_device_s">Сейчас будет выполнена проверка, что этим устройством действительно используется номер телефона:\n\n%s\n\nНомер введён правильно, или необходимо его редактирование?</string>
+  <string name="RegistrationActivity_continue">Продолжить</string>
+  <string name="RegistrationActivity_edit">Изменить</string>
+  <!-- RegistrationProblemsActivity -->
+  <string name="RegistrationProblemsActivity_possible_problems">Возможные проблемы</string>
+  <!-- RegistrationProgressActivity -->
+  <string name="RegistrationProgressActivity_verifying_number">Подтверждение номера</string>
+  <string name="RegistrationProgressActivity_edit_s">Изменить %s</string>
+  <string name="RegistrationProgressActivity_registration_complete">Регистрация завершена!</string>
+  <string name="RegistrationProgressActivity_possible_problems">Возможные проблемы.</string>
+  <string name="RegistrationProgressActivity_you_must_enter_the_code_you_received_first">Необходимо ввести полученный код.</string>
+  <string name="RegistrationProgressActivity_connecting">Подключение</string>
+  <string name="RegistrationProgressActivity_connecting_for_verification">Подключение к серверу верификации...</string>
+  <string name="RegistrationProgressActivity_network_error">Ошибка сети!</string>
+  <string name="RegistrationProgressActivity_unable_to_connect">Подключение невозможно. Проверьте интернет-подключение и повторите попытку.</string>
+  <string name="RegistrationProgressActivity_verification_failed">Верификация не удалась!</string>
+  <string name="RegistrationProgressActivity_the_verification_code_you_submitted_is_incorrect">Введённый код подтверждения неправилен. Попробуйте ещё раз.</string>
+  <string name="RegistrationProgressActivity_too_many_attempts">Слишком много попыток регистрации</string>
+  <string name="RegistrationProgressActivity_youve_submitted_an_incorrect_verification_code_too_many_times">Слишком много попыток ввода неправильных кодов подтверждения. Подождите минуту и попробуйте снова.</string>
+  <string name="RegistrationProgressActivity_requesting_call">Запрос вызова</string>
+  <string name="RegistrationProgressActivity_requesting_incoming_call">Выполняется запрос телефонного звонка...</string>
+  <string name="RegistrationProgressActivity_server_error">Ошибка сервера</string>
+  <string name="RegistrationProgressActivity_the_server_encountered_an_error">Произошла ошибка сервера. Попробуйте ещё раз.</string>
+  <string name="RegistrationProgressActivity_too_many_requests">Слишком много запросов кода!</string>
+  <string name="RegistrationProgressActivity_youve_already_requested_a_voice_call">Телефонный звонок уже был запрошен. Запросить ещё один можно только через 20 минут.</string>
+  <string name="RegistrationProgressActivity_verifying_voice_code">Выполняется проверка кода...</string>
+  <!-- RegistrationService -->
+  <string name="RegistrationService_registration_complete">Регистрация завершена</string>
+  <string name="RegistrationService_textsecure_registration_has_successfully_completed">Регистрация в службе TextSecure успешно выполнена.</string>
+  <string name="RegistrationService_registration_error">Ошибка регистрации</string>
+  <string name="RegistrationService_textsecure_registration_has_encountered_a_problem">Произошла ошибка при регистрации в службе TextSecure.</string>
+  <!-- SmsMessageRecord -->
+  <string name="SmsMessageRecord_received_corrupted_key_exchange_message">Получено повреждённое сообщение обмена ключами!</string>
+  <string name="SmsMessageRecord_received_key_exchange_message_for_invalid_protocol_version">Получено сообщение обмена ключами для неправильной версии протокола.</string>
+  <string name="SmsMessageRecord_received_message_with_unknown_identity_key_click_to_process">Получено сообщение с неизвестным личным ключом. Нажмите для его отображения.</string>
   <!--VerifyIdentityActivity-->
   <string name="VerifyIdentityActivity_you_do_not_have_an_identity_key">У вас нет личного ключа.</string>
   <string name="VerifyIdentityActivity_recipient_has_no_identity_key">У получателя нет личного ключа.</string>
@@ -170,6 +221,7 @@
   <string name="MmsDatabase_downloading_mms">Скачиваем MMS-сообщение...</string>
   <string name="MmsDatabase_mms_download_failed">Не удалось скачать MMS-сообщение!</string>
   <string name="MmsDatabase_downloading">Скачиваем...</string>
+  <string name="MmsDatabase_mms_pending_download">Нажмите для ввода настроек MMS и продолжения загрузки.</string>
   <!--MmsMessageRecord-->
   <string name="MmsMessageRecord_decrypting_mms_please_wait">Расшифровываем MMS-сообщение...</string>
   <string name="MmsMessageRecord_bad_encrypted_mms_message">Зашифрованное MMS-сообщение испорчено...</string>
@@ -257,12 +309,12 @@
   <!--prompt_passphrase_activity-->
   <string name="prompt_passphrase_activity__textsecure_passphrase">ПАРОЛЬНАЯ ФРАЗА TEXTSECURE</string>
   <string name="prompt_passphrase_activity__unlock">Открыть</string>
-  <!--prompt_apn_activity-->
-  <string name="prompt_apn_activity__textsecure_requires_apn_settings_to_deliver_media_messages_via_your_wireless_carrier">Для отправки MMS-сообщений TextSecure необходимо знать настройки APN вашего оператора. Однако ваше устройство не предоставляет этой информации — так иногда бывает, если оно заблокировано или соответствующим образом настроено.</string>
-  <string name="prompt_apn_activity__to_send_media_messages_please_complete_the_necessary_apn_information_below">Чтобы иметь возможность отправлять MMS-сообщения, введите информацию об APN ниже. Нужные значения для вашего оператора можно найти в интернете по запросу «&amp;lt;оператор&amp;gt; APN» или в его службе поддержки. Это нужно сделать только один раз.</string>
-  <string name="prompt_apn_activity__mmsc_url_required">АДРЕС MMS-ЦЕНТРА (ОБЯЗАТЕЛЬНО):</string>
-  <string name="prompt_apn_activity__mms_proxy_host_optional">ПРОКСИ ДЛЯ MMS (НЕОБЯЗАТЕЛЬНО):</string>
-  <string name="prompt_apn_activity__mms_proxy_port_optional">ПОРТ ПРОКСИ ДЛЯ MMS (НЕОБЯЗАТЕЛЬНО):</string>
+  <!--prompt_mms_activity-->
+  <string name="prompt_mms_activity__textsecure_requires_mms_settings_to_deliver_media_and_group_messages">Для отправки MMS-сообщений TextSecure необходимо знать настройки APN вашего оператора. Однако ваше устройство не предоставляет этой информации — так иногда бывает, если оно заблокировано или соответствующим образом настроено.</string>
+  <string name="prompt_mms_activity__to_send_media_and_group_messages_click_ok">Чтобы иметь возможность отправлять MMS-сообщения, введите информацию об APN ниже. Нужные значения для вашего оператора можно найти в интернете по запросу «&amp;lt;оператор&amp;gt; APN» или в его службе поддержки. Это нужно сделать только один раз.</string>
+  <string name="prompt_mms_activity__mmsc_url_required">АДРЕС MMS-ЦЕНТРА (ОБЯЗАТЕЛЬНО):</string>
+  <string name="prompt_mms_activity__mms_proxy_host_optional">ПРОКСИ ДЛЯ MMS (НЕОБЯЗАТЕЛЬНО):</string>
+  <string name="prompt_mms_activity__mms_proxy_port_optional">ПОРТ ПРОКСИ ДЛЯ MMS (НЕОБЯЗАТЕЛЬНО):</string>
   <!--receive_key_activity-->
   <string name="receive_key_activity__complete">Выполнить</string>
   <!--recipients_panel-->
@@ -349,8 +401,6 @@
   <string name="preferences__advanced">Расширенные</string>
   <string name="preferences__passphrase">Парольная фраза</string>
   <string name="preferences__advanced_mms_access_point_names">Резервный MMS-центр</string>
-  <string name="preferences__enable_fallback_mmsc">Включить резервный MMS-центр</string>
-  <string name="preferences__use_mmsc_information_configured_here_when_system_apn_information_is_unavailable">Использовать указанный здесь MMS-центр, когда нет системной информации об APN.</string>
   <string name="preferences__mmsc_url_required">Адрес MMS-центра (обязательно)</string>
   <string name="preferences__mms_proxy_host_optional">Адрес прокси для MMS (необязательно)</string>
   <string name="preferences__mms_proxy_port_optional">Порт прокси для MMS (необязательно)</string>
@@ -395,7 +445,6 @@
   <string name="conversation_list__menu_search">Поиск</string>
   <!--conversation_secure_verified-->
   <string name="conversation_secure_verified__menu_security">Безопасность</string>
-  <string name="conversation_secure_verified__menu_verify_session">Подтвердить сеанс</string>
   <string name="conversation_secure_verified__menu_verify_recipient">Подтвердить получателя</string>
   <string name="conversation_secure_verified__menu_abort_secure_session">Закончить защищённый сеанс</string>
   <!--conversation-->
