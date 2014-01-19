@@ -1,10 +1,25 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013-2014 The CyanogenMod Project
+
+     This program is free software: you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation, either version 3 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
 <resources>
   <string name="app_name">TextSecure</string>
   <string name="yes">כן</string>
   <string name="no">לא</string>
   <string name="delete">מחק</string>
-  <!--ApplicationPreferencesActivity-->
   <string name="ApplicationPreferencesActivity_currently_s">עכשיו: %s</string>
   <string name="ApplicationPreferenceActivity_you_need_to_have_entered_your_passphrase_before_managing_keys">אתה צריך להכניס את הסיסמה לפני שאתה מנהל את המפתחות...</string>
   <string name="ApplicationPreferenceActivity_you_havent_set_a_passphrase_yet">עדיין לא הגדרת סיסמה!</string>
@@ -16,11 +31,12 @@
   <string name="ApplicationPreferencesActivity_disable_storage_encryption">לבטל הצפנת אחסון?</string>
   <string name="ApplicationPreferencesActivity_warning_this_will_disable_storage_encryption_for_all_messages">\nאזהרה, פעולה זו תבטל הצפנה מקומית לכל ההודעות והמפתחות. החיבורים\nהמאובטחים שלך ימשיכו לתפקד, אבל כל אחד עם גישה פיזית למכשירך יוכל\nלגשת אליהם.\n</string>
   <string name="ApplicationPreferencesActivity_disable">בטל</string>
-  <!--AttachmentTypeSelectorAdapter-->
+  <string name="ApplicationPreferencesActivity_unregistering">מבטל רישום...</string>
+  <string name="ApplicationPreferencesActivity_unregistering_for_data_based_communication">מבטל רישום עבור תקשורת מבוססת נתונים</string>
+  <string name="ApplicationPreferencesActivity_error_connecting_to_server">שגיאה בהתחברות לשרת!</string>
   <string name="AttachmentTypeSelectorAdapter_picture">תמונה</string>
   <string name="AttachmentTypeSelectorAdapter_video">וידאו</string>
   <string name="AttachmentTypeSelectorAdapter_audio">שמע</string>
-  <!--ConversationItem-->
   <string name="ConversationItem_message_size_d_kb">גודל ההודעה: %d KB</string>
   <string name="ConversationItem_expires_s">פג: %s</string>
   <string name="ConversationItem_error_sending_message">שגיאה בשליחת ההודעה</string>
@@ -37,7 +53,6 @@
   <string name="ConversationItem_received_and_processed_key_exchange_message">הודעת החלפת מפתח התקבלה ועברה עיבוד.</string>
   <string name="ConversationItem_error_received_stale_key_exchange_message">שגיאה, התקבלה הודעת החלפת מפתח מיושנת.</string>
   <string name="ConversationItem_received_key_exchange_message_click_to_process">התקבלה הודעת החלפת מפתח, לחץ כדי להמשיך</string>
-  <!--ConversationActivity-->
   <string name="ConversationActivity_initiate_secure_session_question">להתחיל חיבור מאובטח?</string>
   <string name="ConversationActivity_initiate_secure_session_with_s_question">להתחיל חיבור מאובטח עם %s?</string>
   <string name="ConversationActivity_abort_secure_session_confirmation">אישור ביטול חיבור מאובטח</string>
@@ -45,6 +60,7 @@
   <string name="ConversationActivity_delete_thread_confirmation">אישור מחיקת שרשור</string>
   <string name="ConversationActivity_are_you_sure_that_you_want_to_permanently_delete_this_conversation_question">אתה בטוח שאתה רוצה למחוק את השיחה הזאת לתמיד?</string>
   <string name="ConversationActivity_add_attachment">צרף קובץ</string>
+  <string name="ConversationActivity_select_contact_info">בחר מידע ליצירת קשר</string>
   <string name="ConversationActivity_compose_message">חבר הודעה</string>
   <string name="ConversationActivity_sorry_there_was_an_error_setting_your_attachment">סליחה, הייתה שגיאה בהצבת הקובץ המצורף שלך.</string>
   <string name="ConversationActivity_sorry_the_selected_video_exceeds_message_size_restrictions">סליחה, קובץ הוידאו שנבחר חורג מגבולות גודל ההודעה.</string>
@@ -59,22 +75,17 @@
   <string name="ConversationActivity_invalid_recipient">נמען שגוי!</string>
   <string name="ConversationActivity_calls_not_supported">שיחות אינן נתמכות</string>
   <string name="ConversationActivity_this_device_does_not_appear_to_support_dial_actions">נראה כי מכשיר זה אינו תומך בפעולות חיוג.</string>
-  <!--ConversationFragment-->
   <string name="ConversationFragment_message_details">פרטי הודעה</string>
   <string name="ConversationFragment_sender_s_transport_s_sent_received_s">שולח: %1$s\nתעבורה: %2$s\nנשלח/התקבל: %3$s</string>
   <string name="ConversationFragment_sender_s_transport_s_sent_s_received_s">שולח: %1$s\nתעבורה: %2$s\nנשלח: %3$s\nהתקבל: %4$s</string>
   <string name="ConversationFragment_confirm_message_delete">אשר מחיקת הודעה</string>
   <string name="ConversationFragment_are_you_sure_you_want_to_permanently_delete_this_message">אתה בטוח שאתה רוצה למחוק את ההודעה הזו לתמיד?</string>
-  <!--ConversationListAdapter-->
   <string name="ConversationListAdapter_key_exchange_message">הודעת החלפת מפתח...</string>
-  <!--ConversationListFragment-->
   <string name="ConversationListFragment_delete_threads_question">למחוק שרשורים?</string>
   <string name="ConversationListFragment_are_you_sure_you_wish_to_delete_all_selected_conversation_threads">אתה בטוח שאתה רוצה למחוק את השרשורים של כל השיחות שנבחרו?</string>
   <string name="ConversationListFragment_deleting">מוחק</string>
   <string name="ConversationListFragment_deleting_selected_threads">מוחק שרשורים שנבחרו...</string>
-  <!--ConversationListItem-->
   <string name="ConversationListItem_key_exchange_message">הודעת החלפת מפתח...</string>
-  <!--ExportFragment-->
   <string name="ExportFragment_export_to_sd_card">לייצא לכרטיס ה-SD?</string>
   <string name="ExportFragment_this_will_export_your_encrypted_keys_settings_and_messages">פעולה זו\nתייצא את המפתחות, ההגדרות וההודעות המוצפנות שלך לכרטיס ה-SD.\n</string>
   <string name="ExportFragment_export">יצא</string>
@@ -87,7 +98,6 @@
   <string name="ExportFragment_error_while_writing_to_sd_card">שגיאה בכתיבה לכרטיס ה-SD.\n</string>
   <string name="ExportFragment_success">הצליח!</string>
   <string name="ExportFragment_exporting_keys_settings_and_messages">מייצא מפתחות, הגדרות\nוהודעות מוצפנות...\n</string>
-  <!--ImportFragment-->
   <string name="ImportFragment_import_system_sms_database">לייבא את בסיס הנתונים של ה-SMS מהמערכת?</string>
   <string name="ImportFragment_this_will_import_messages_from_the_system">פעולה זו תייבא\nהודעות מבסיס הנתונים של ה-SMS ברירת המחדל של המערכת ל-TextSecure.\n אם כבר ייבאת מבסיס נתונים זה, ייבוא מחדש יגרום להודעות כפולות.</string>
   <string name="ImportFragment_import">יבא</string>
@@ -106,31 +116,64 @@
   <string name="ImportFragment_restoring_encrypted_backup">משחזר גיבוי מוצפן...</string>
   <string name="ImportFragment_no_encrypted_backup_found">לא נמצא גיבוי מוצפן!</string>
   <string name="ImportFragment_restore_complete">השחזור הסתיים!</string>
-  <!--KeyScanningActivity-->
   <string name="KeyScanningActivity_no_scanned_key_found_exclamation">לא נמצא מפתח סרוק!</string>
-  <!--MmsDownloader-->
   <string name="MmsDownloader_no_connectivity_available_for_mms_download_try_again_later">אין חיבור זמין להורדת MMS, נסה שוב לאחר מכן...</string>
   <string name="MmsDownloader_error_storing_mms">שגיאה באחסון ה-MMS!</string>
   <string name="MmsDownloader_error_connecting_to_mms_provider">שגיאה בהתחברות לספק ה-MMS...</string>
-  <!--NotificationMmsMessageRecord-->
+  <string name="MmsDownloader_error_reading_mms_settings">שגיאה בקריאת הגדרות ספק MMS...</string>
   <string name="NotificationMmsMessageRecord_multimedia_message">הודעת מולטימדיה</string>
-  <!--PassphraseChangeActivity-->
   <string name="PassphraseChangeActivity_passphrases_dont_match_exclamation">סיסמאות לא זהות!</string>
   <string name="PassphraseChangeActivity_incorrect_old_passphrase_exclamation">סיסמה ישנה לא נכונה.</string>
-  <!--PassphraseCreateActivity-->
   <string name="PassphraseCreateActivity_passphrases_dont_match">הסיסמאות אינן תואמות</string>
   <string name="PassphraseCreateActivity_you_must_specify_a_password">אתה חייב לציין סיסמה</string>
-  <!--PassphrasePromptActivity-->
   <string name="PassphrasePromptActivity_invalid_passphrase_exclamation">סיסמה שגויה!</string>
-  <!--PromptApnActivity-->
-  <string name="PromptApnActivity_you_must_specify_an_mmsc_url_for_your_carrier">אתה חייב לציין כתובת MMSC עבור ספק השירות שלך.</string>
-  <string name="PromptApnActivity_mms_settings_updated">הגדרות ה-MMS עודכנו</string>
-  <string name="PromptApnActivity_you_can_modify_these_values_from_the_textsecure_settings_menu_at_any_time_">אתה יכול לערוך את הערכים האלו מתפריט ההגדרות של TextSecure בכל זמן.</string>
-  <!--ReceiveKeyActivity-->
+  <string name="PromptMmsActivity_you_must_specify_an_mmsc_url_for_your_carrier">עליך לספק כתובת MMSC עבור הספק שלך.</string>
+  <string name="PromptMmsActivity_mms_settings_updated">הגדרות MMS עודכנו</string>
+  <string name="PromptMmsActivity_you_can_modify_these_values_from_the_textsecure_settings_menu_at_any_time_">באפשרותך לשנות ערכים אלה בתפריט הגדרות TextSecure בכל עת.</string>
   <string name="ReceiveKeyActivity_the_signature_on_this_key_exchange_is_different">החתימה\nעל החלפת המפתח הזאת שונה ממה שקיבלת בעבר מאיש הקשר הזה.\nזה יכול להעיד שמישהו מנסה ליירט את התקשורת שלך\nאו\nשאיש הקשר פשוט התקין מחדש את TextSecure ועכשיו יש לו מפתח זהות חדש.\n</string>
   <string name="ReceiveKeyActivity_you_may_wish_to_verify_this_contact">ייתכן שתרצה לאמת\nאת איש הקשר הזה.\n</string>
   <string name="ReceiveKeyActivity_the_signature_on_this_key_exchange_is_trusted_but">החתימה\nעל החלפת המפתח הזו אמינה, אבל ביטלת את האפשרות של \"השלם החלפת\n מפתח אוטומטית\" בהגדרות.\n</string>
-  <!--VerifyIdentityActivity-->
+  <string name="ReceiveKeyActivity_processing">מעבד</string>
+  <string name="ReceiveKeyActivity_processing_key_exchange">עיבוד חילופי מפתחות…</string>
+  <string name="RegistrationActivity_connect_with_textsecure">צור קשר עם TextSecure</string>
+  <string name="RegistrationActivity_select_your_country">בחר את המדינה שלך</string>
+  <string name="RegistrationActivity_you_must_specify_your_country_code">עליך לציין את קוד המדינה שלך</string>
+  <string name="RegistrationActivity_you_must_specify_your_phone_number">עליך לציין את מספר הטלפון שלך</string>
+  <string name="RegistrationActivity_invalid_number">מספר לא חוקי</string>
+  <string name="RegistrationActivity_the_number_you_specified_s_is_invalid">המספר שציינת (%s) אינו חוקי.</string>
+  <string name="RegistrationActivity_unsupported">לא נתמך</string>
+  <string name="RegistrationActivity_sorry_this_device_is_not_supported_for_data_messaging">סליחה, מכשיר זה אינו נתמך להעברת הודעות. מכשירים המריצים גרסת אנדרואיד ישנה מ-4.0 חייבים חשבון גוגל רשום. מכשירים המריצים גרסה 4.0 או יותר חדשהלא צריכים חשבון גוגל, אבל חייבים את חנות ה-Play מותקנת.</string>
+  <string name="RegistrationActivity_we_will_now_verify_that_the_following_number_is_associated_with_your_device_s">אנחנו עכשיו נוודא כי המספר קשורה ל-מכשיר :\n\n%s\n\n האם המספר נכון, או שברצונכם לערוך אותו לפני שתמשיך?     </string>
+  <string name="RegistrationActivity_continue">המשך</string>
+  <string name="RegistrationActivity_edit">ערוך</string>
+  <string name="RegistrationProblemsActivity_possible_problems">בעיות אפשריות</string>
+  <string name="RegistrationProgressActivity_verifying_number">אימות מספר</string>
+  <string name="RegistrationProgressActivity_edit_s">עריכה %s</string>
+  <string name="RegistrationProgressActivity_registration_complete">הרשמה הושלמה!</string>
+  <string name="RegistrationProgressActivity_possible_problems">בעיות אפשריות.</string>
+  <string name="RegistrationProgressActivity_you_must_enter_the_code_you_received_first">עליך להזין את הקוד שקיבלת קודם…</string>
+  <string name="RegistrationProgressActivity_connecting">מתחבר</string>
+  <string name="RegistrationProgressActivity_connecting_for_verification">מתחבר לצורך אימות…</string>
+  <string name="RegistrationProgressActivity_network_error">שגיאת רשת!</string>
+  <string name="RegistrationProgressActivity_unable_to_connect">אין אפשרות להתחבר. בדוק את חיבור הרשת ונסה שוב.</string>
+  <string name="RegistrationProgressActivity_verification_failed">אימות נכשל!</string>
+  <string name="RegistrationProgressActivity_the_verification_code_you_submitted_is_incorrect">קוד האימות שמסרת אינו נכון. נסה שוב.</string>
+  <string name="RegistrationProgressActivity_too_many_attempts">ניסיונות רבים מדי</string>
+  <string name="RegistrationProgressActivity_youve_submitted_an_incorrect_verification_code_too_many_times">הכנסת קוד אימות שגוי יותר מדי פעמים. חכה דקה לפני ניסיון חדש.</string>
+  <string name="RegistrationProgressActivity_requesting_call">בקש שיחה</string>
+  <string name="RegistrationProgressActivity_requesting_incoming_call">מבקש אימות שיחה נכנסת…</string>
+  <string name="RegistrationProgressActivity_server_error">שגיאת שרת</string>
+  <string name="RegistrationProgressActivity_the_server_encountered_an_error">השרת נתקל בשגיאה. נסה שוב.</string>
+  <string name="RegistrationProgressActivity_too_many_requests">בקשות רבות מדי!</string>
+  <string name="RegistrationProgressActivity_youve_already_requested_a_voice_call">כבר ביקשתה שיחת אימות לאחרונה. אתה יכול לבקש שיחה כל 20 דקות.</string>
+  <string name="RegistrationProgressActivity_verifying_voice_code">בודק קוד קולי…</string>
+  <string name="RegistrationService_registration_complete">הרשמה הושלמה</string>
+  <string name="RegistrationService_textsecure_registration_has_successfully_completed">הרשמה ל-TextSecure הושלמה בהצלחה.</string>
+  <string name="RegistrationService_registration_error">שגיאת רישום</string>
+  <string name="RegistrationService_textsecure_registration_has_encountered_a_problem">ההרשמה ל-TextSecure נתקלה בבעיה.</string>
+  <string name="SmsMessageRecord_received_corrupted_key_exchange_message">קיבל מפתח החלפה פגום!</string>
+  <string name="SmsMessageRecord_received_key_exchange_message_for_invalid_protocol_version">קיבל מפתח החלפה עבור גרסת פרוטוקול לא ידועה.</string>
+  <string name="SmsMessageRecord_received_message_with_unknown_identity_key_click_to_process">קיבל הודעה עם מפתח זהות לא ידועה. לחץ כדי לעבד ולהציג.</string>
   <string name="VerifyIdentityActivity_you_do_not_have_an_identity_key">אין לך מפתח זהות.</string>
   <string name="VerifyIdentityActivity_recipient_has_no_identity_key">לנמען אין מפתח זהות.</string>
   <string name="VerifyIdentityActivity_recipient_has_no_identity_key_exclamation">לנמען אין מפתח זהות!</string>
@@ -141,14 +184,12 @@
   <string name="VerifyIdentityActivity_their_key_is_correct_it_is_also_necessary_to_verify_your_key_with_them_as_well">המפתח שלהם נכון. זה הכרחי גם לאמת את המפתח שלך איתם.</string>
   <string name="VerifyIdentityActivity_verified_exclamation">אומת!</string>
   <string name="VerifyIdentityActivity_you_don_t_have_an_identity_key_exclamation">אין לך מפתח זהות!</string>
-  <!--VerifyKeysActivity-->
   <string name="VerifyKeysActivity_get_my_fingerprint_scanned">סריק את טביעת האצבע שלי</string>
   <string name="VerifyKeysActivity_scan_their_fingerprint">סרוק את טביעת האצבע שלהם</string>
   <string name="VerifyKeysActivity_warning_the_scanned_key_does_not_match_please_check_the_fingerprint_text_carefully2">אזהרה, המפתח שנסרק אינו תואם! בבקשה בדוק בזהירות את הטקסט של טביעת האצבע.</string>
   <string name="VerifyKeysActivity_not_verified_exclamation">לא מאומת!</string>
   <string name="VerifyKeysActivity_their_key_is_correct_it_is_also_necessary_to_get_your_fingerprint_scanned_as_well">המפתח שלהם נכון. זה הכרחי גם לסרוק את טביעת האצבע שלך.</string>
   <string name="VerifyKeysActivity_verified_exclamation">אומת!</string>
-  <!--ViewIdentityActivity-->
   <string name="ViewIdentityActivity_you_do_not_have_an_identity_key">אין לך מפתח זהות.</string>
   <string name="ViewIdentityActivity_scan_to_compare">סרוק להשוואה</string>
   <string name="ViewIdentityActivity_get_scanned_to_compare">עבור סריקה להשוואה</string>
@@ -157,32 +198,25 @@
   <string name="ViewIdentityActivity_the_scanned_key_matches_exclamation">המפתח שנסרק מתאים!</string>
   <string name="ViewIdentityActivity_verified_exclamation">אומת!</string>
   <string name="ViewIdentityActivity_identity_fingerprint">טביעת אצבע של זהות</string>
-  <!--KeyExchangeInitiator-->
   <string name="KeyExchangeInitiator_initiate_despite_existing_request_question">לאתחל למרות הבקשה הקיימת?</string>
   <string name="KeyExchangeInitiator_youve_already_sent_a_session_initiation_request_to_this_recipient_are_you_sure">אתה כבר שלחת בקשת אתחול חיבור לנמען הזה, אתה בטוח שאתה רוצה לשלוח עוד אחד? זה יבטל את הבקשה הראשונה.</string>
   <string name="KeyExchangeInitiator_send">שלח</string>
-  <!--MessageDisplayHelper-->
   <string name="MessageDisplayHelper_bad_encrypted_message">הודעה מוצפנת פגומה...</string>
   <string name="MessageDisplayHelper_decrypting_please_wait">מפענח, אנא המתן...</string>
   <string name="MessageDisplayHelper_message_encrypted_for_non_existing_session">ההודעה הוצפנה לחיבור שאינו קיים...</string>
-  <!--MmsDatabase-->
   <string name="MmsDatabase_connecting_to_mms_server">מתחבר לשרת ה-MMS...</string>
   <string name="MmsDatabase_downloading_mms">מוריד MMS...</string>
   <string name="MmsDatabase_mms_download_failed">הורדת MMS נכשלה!</string>
   <string name="MmsDatabase_downloading">מוריד...</string>
-  <!--MmsMessageRecord-->
+  <string name="MmsDatabase_mms_pending_download">הקש וקבע את הגדרות MMS כדי להמשיך להוריד.</string>
   <string name="MmsMessageRecord_decrypting_mms_please_wait">מפענח MMS, אנא המתן...</string>
   <string name="MmsMessageRecord_bad_encrypted_mms_message">הודעת MMS מוצפנת פגומה...</string>
   <string name="MmsMessageRecord_mms_message_encrypted_for_non_existing_session">הודעת ה-MMS הוצפנה לחיבור שלא קיים...</string>
-  <!--MmsSender-->
   <string name="MmsSender_currently_unable_to_send_your_mms_message">לא ניתן לשלוח כעת את הודעת ה-MMS שלך.</string>
-  <!--ApplicationMigrationService-->
   <string name="ApplicationMigrationService_import_in_progress">בתהליך ייבוא</string>
   <string name="ApplicationMigrationService_importing_text_messages">מייבא הודעות טקסט</string>
-  <!--KeyCachingService-->
   <string name="KeyCachingService_textsecure_passphrase_cached">הסיסמה של TextSecure בזיכרון</string>
   <string name="KeyCachingService_passphrase_cached">הסיסמא בזיכרון</string>
-  <!--MessageNotifier-->
   <string name="MessageNotifier_d_new_messages">%d הודעות חדשות</string>
   <string name="MessageNotifier_most_recent_from_s">האחרון מ-: %s</string>
   <string name="MessageNotifier_encrypted_message">הודעה מוצפנת...</string>
@@ -192,7 +226,6 @@
   <string name="MessageNotifier_error_delivering_message">שגיאה במסירת ההודעה.</string>
   <string name="MessageNotifier_mark_all_as_read">סמן הכל כנקרא</string>
   <string name="MessageNotifier_mark_as_read">סמן כנקרא</string>
-  <!--ViewLocalIdentityActivity-->
   <string name="ViewLocalIdentityActivity_regenerating">מייצר מחדש...</string>
   <string name="ViewLocalIdentityActivity_regenerating_identity_key">מייצר מפתח זהות\nמחדש...\n</string>
   <string name="ViewLocalIdentityActivity_regenerated">יוצר מחדש!</string>
@@ -200,48 +233,36 @@
   <string name="ViewLocalIdentityActivity_by_regenerating_your_identity_key_your_existing_contacts_will_receive_warnings">\nאזהרה! ייצור מחדש של מפתח הזהות יאבד את מפתח הזהות\nהעכשווי,\nואנשי הקשר הקיימים שלך יקבלו אזהרה כשהם ינסו לבצע חיבור מאובטח\nחדש איתך.\nאתה בטוח שברצונך להמשיך?\n</string>
   <string name="ViewLocalIdentityActivity_cancel">בטל</string>
   <string name="ViewLocalIdentityActivity_continue">המשך</string>
-  <!--SmsReceiver-->
   <string name="SmsReceiver_currently_unable_to_send_your_sms_message">לא ניתן לשלוח כעת את הודעת ה-SMS שלך. היא תשלח כשהשירות יהיה זמין.</string>
-  <!--auto_initiate_activity-->
   <string name="auto_initiate_activity__you_have_received_a_message_from_someone_who_supports_textsecure_encrypted_sessions_would_you_like_to_initiate_a_secure_session">קיבלת הודעה ממישהו שתומך בחיבור מאובטח של TextSecure. האם ברצונך להתחיל חיבור מאובטח? </string>
   <string name="auto_initiate_activity__initiate_exchange">התחל החלפה</string>
-  <!--change_passphrase_activity-->
   <string name="change_passphrase_activity__old_passphrase">סיסמה ישנה:</string>
   <string name="change_passphrase_activity__new_passphrase">סיסמה חדשה:</string>
   <string name="change_passphrase_activity__repeat_new_passphrase">חזור על הסיסמה החדשה:</string>
-  <!--contact_selection_group_activity-->
-  <!--contact_selection_list_activity-->
   <string name="contact_selection_group_activity__no_contacts">אין אנשי קשר.</string>
-  <!--ContactSelectionListFragment-->
   <string name="ContactSelectionlistFragment_select_for">בחר עבור</string>
-  <!--contact_selection_recent_activity-->
   <string name="contact_selection_recent_activity__no_recent_calls">אין שיחות אחרונות.</string>
-  <!--conversation_activity-->
   <string name="conversation_activity__type_message">הקלד הודעה</string>
   <string name="conversation_activity__send">שלח</string>
   <string name="conversation_activity__remove">הסר</string>
-  <!--conversation_item_sent-->
   <string name="conversation_item_sent__download">הורד</string>
   <string name="conversation_item_sent__downloading">מוריד</string>
-  <!--conversation_item_received-->
   <string name="conversation_item_received__download">הורד</string>
   <string name="conversation_item_received__downloading">מוריד</string>
-  <!--conversation_fragment_cab-->
   <string name="conversation_fragment_cab__batch_selection_mode">מצב בחירה מרובה</string>
-  <!--create_passphrase_activity-->
+  <string name="country_selection_fragment__loading_countries">טוען מדינות…</string>
+  <string name="country_selection_fragment__search">חיפוש</string>
   <string name="create_passphrase_activity__please_choose_a_passphrase_that_will_be_used_to_locally_encrypt_your_data_this_should_be_a_strong_passphrase">בחר בבקשה סיסמה כדי להצפין מקומית את המידע שלך.\n\nזו צריכה להיות סיסמה חדשה.</string>
   <string name="create_passphrase_activity__passphrase">סיסמה:</string>
   <string name="create_passphrase_activity__repeat">חזור:</string>
   <string name="create_passphrase_activity__continue">המשך</string>
   <string name="create_passphrase_activity__generating_secrets">מייצר סודות</string>
-  <!--database_migration_activity-->
   <string name="database_migration_activity__would_you_like_to_import_your_existing_text_messages">אתה רוצה לייבא את הודעות הטקסט הקיימות שלך לבסיס הנתונים המוצפן של TextSecure?</string>
   <string name="database_migration_activity__the_default_system_database_will_not_be_modified">בסיס הנתונים ברירת המחדל של המערכת לא ישתנה בשום אופן.</string>
   <string name="database_migration_activity__skip">דלג</string>
   <string name="database_migration_activity__import">יבא</string>
   <string name="database_migration_activity__this_could_take_a_moment_please_be_patient">זה יכול לקחת כמה רגעים. סבלנות בבקשה, אנחנו נודיע לך כשהייבוא הושלם.</string>
   <string name="database_migration_activity__importing">מייבא</string>
-  <!--database_upgrade_activity-->
   <string name="database_upgrade_activity__updating_database">מעדכן את בסיס הנתונים...</string>
   <string name="export_fragment__export_encrypted_backup">יצא גיבוי מוצפן</string>
   <string name="export_fragment__export_an_encrypted_backup_to_the_sd_card">יצא גיבוי\nמוצפן לכרטיס ה-SD.\n</string>
@@ -254,33 +275,57 @@
   <string name="import_fragment__import_plaintext_backup">יבא גיבוי לא מוצפן</string>
   <string name="import_fragment__import_a_plaintext_backup_file">\nיבא קובץ גיבוי לא מוצפן. תואם \'SMSBackup And Restore\'.</string>
   <string name="local_identity__regenerate_key">יצר מפתח מחדש</string>
-  <!--prompt_passphrase_activity-->
+  <string name="mms_preferences_activity__manual_mms_settings_are_required">הגדרות MMS ידניות מדרשות למכשירך.</string>
   <string name="prompt_passphrase_activity__textsecure_passphrase">סיסמת TextSecure</string>
   <string name="prompt_passphrase_activity__unlock">פתח</string>
-  <!--prompt_apn_activity-->
-  <string name="prompt_apn_activity__textsecure_requires_apn_settings_to_deliver_media_messages_via_your_wireless_carrier">TextSecure חייבת הגדרות APN כדי לשלוח הודעות מולטימדיה דרך ספק השירות שלך. המכשיר שלך לא מספק את המידע הזה, זה קורה לעיתים במכשירים נעולים או קונפיגורציות מוגבלות אחרות.</string>
-  <string name="prompt_apn_activity__to_send_media_messages_please_complete_the_necessary_apn_information_below">כדי לשלוח הודעות מולטימדיה, בבקשה השלם את מידע ה-APN הנצרך למטה. את הערכים עבור ספק השירות שלך אתה יכול למצוא בד\"כ ע\"י חיפוש \'&amp;lt;your carrier&amp;gt; APN\'. אתה תצטרך להשלים מידע זה רק פעם אחת.</string>
-  <string name="prompt_apn_activity__mmsc_url_required">כתובת MMSC (חובה):</string>
-  <string name="prompt_apn_activity__mms_proxy_host_optional">שרת Proxy של MMS (לא חובה):</string>
-  <string name="prompt_apn_activity__mms_proxy_port_optional">פתחת ה-Proxy של שרת ה-MMS (לא חובה):</string>
-  <!--receive_key_activity-->
+  <string name="prompt_mms_activity__textsecure_requires_mms_settings_to_deliver_media_and_group_messages">TextSecure דורש הגדרות MMS כדי להעביר מדיה והודעות קבוצתיות דרך הספק שלך. המכשיר שלך אינו מספק את המידע הזה, אשר תקף למכשירים נעולים והגדרות מגבילות אחרות.</string>
+  <string name="prompt_mms_activity__to_send_media_and_group_messages_click_ok">כדי לשלוח מדיה והודעות קבוצתיות, לחץ על \"אישור\" והשלם את תהליך ההגדרה. הגדרות ה-MMS עבור הספק שלך יכולים להימצא על ידי חיפוש APN של המפעיל. תצטרך לעשות זאת רק פעם אחת.</string>
+  <string name="prompt_mms_activity__mmsc_url_required">כתובת MMSC (נדרש):</string>
+  <string name="prompt_mms_activity__mms_proxy_host_optional">שרת פרוקסי של MMS (אופציונלי):</string>
+  <string name="prompt_mms_activity__mms_proxy_port_optional">פורט פרוקסי של MMS (אופציונלי):</string>
   <string name="receive_key_activity__complete">השלם</string>
-  <!--recipients_panel-->
+  <string name="registration_activity__textsecure_can_use_the_data_channel_to_avoid_sms_charges_when_communicating_with_other_textsecure_users">TextSecure יכול להשתמש בחיבור רשת כדי להימנע מתשלום על SMS בתקשורת עם משתמשי TextSecure. כדי לאפשר זאת, אנה אמת את קוד המדינתך ואת מספרך.</string>
+  <string name="registration_activity__your_country">המדינה שלך</string>
+  <string name="registration_activity__your_country_code_and_phone_number">קוד המדינה ומספר הטלפון שלך     </string>
+  <string name="registration_activity__phone_number">מספר טלפון</string>
+  <string name="registration_activity__register">הרשם</string>
+  <string name="registration_problems__some_possible_problems_include">בעיות אפשריות כוללות:     </string>
+  <string name="registration_problems__sms_interceptors">מיירטי SMS.</string>
+  <string name="registration_problems__some_third_party_text_messaging_clients_such_as_handcent">כמה תוכנות SMS צד שלישי, כמו Handcent או GoSMS, תופסות את כל הודעות ה-SMS. בדוק אם קיבלת הודעה שמתחילה ב-\"קודם ה-TextSecure שלך הוא:\", ובמקרה כזה אתה תצטרך להגדיר את התוכנה לאפשר להעביר הודעות SMS הלאה.</string>
+  <string name="registration_problems__incorrect_number">מספר שגוי.</string>
+  <string name="registration_problems__please_checkt_to_make_sure_you_entered_your_number_correctly">בדוק שהזנת את המספר שלך בצורה נכונה, ואת זה הוא שהוא מעוצב בצורה נכונה עבור האזור שלך.     </string>
+  <string name="registration_problems__google_voice">Google Voice</string>
+  <string name="registration_problems__textsecure_will_not_work_with_google_voice_numbers">         TextSecure לא יעבוד עם מספרי Google Voice.  </string>
+  <string name="registration_progress_activity__voice_verification">בדיקת קול</string>
+  <string name="registration_progress_activity__textsecure_can_also_call_you_to_verify_your_number">TextSecure יכול גם להתקשר אליך בשביל אימות מספר. לחץ על \"התקשר אלי\" והכנס את 6 הספרות שאתה שומע.</string>
+  <string name="registration_progress_activity__verify">אמת</string>
+  <string name="registration_progress_activity__call_me">התקשר אלי</string>
+  <string name="registration_progress_activity__edit_number">עריכת מספר</string>
+  <string name="registration_progress_activity__connectivity_error">שגיאת קישור.</string>
+  <string name="registration_progress_activity__textsecure_was_unable_to_connect_to_the_push_service">TextSecure לא הצליח להתחבר לשירות ההודעות.</string>
+  <string name="registration_progress_activity__some_possible_problems_include">בעיות אפשריות כוללות:     </string>
+  <string name="registration_progress_activity__no_network_connectivity">אין חיבור רשת.</string>
+  <string name="registration_progress_activity__your_device_needs_network_connectivity">המכשיר שלך צריך חיבור לרשת במטרה להשתמש באפשריות TextSecure. בדוק שאתה מחובר ל-3G או ל-Wi-Fi.</string>
+  <string name="registration_progress_activity__restrictive_firewall">חומת אש מגבילה.     </string>
+  <string name="registration_progress_activity__if_you_are_connected_via_wifi_its_possible_that_there_is_a_firewall">אם אתה מחובר באמצעות Wi-Fi, ייתכן ויש חומת אש החוסמת גישה לשרת TextSecure. נסה עוד רשת או נתונים חברת סלולר.</string>
+  <string name="registration_progress_activity__textsecure_will_now_automatically_verify_your_number_with_a_confirmation_sms_message">TextSecure יוודא כעת באופן אוטומטי את המספר שלך באמצעות הודעת SMS.    </string>
+  <string name="registration_progress_activity__connecting">מתחבר…</string>
+  <string name="registration_progress_activity__waiting_for_sms_verification">מחכה לאימות SMS…</string>
+  <string name="registration_progress_activity__registering_with_server">הרשמה באמצעות השרת…</string>
+  <string name="registration_progress_activity__this_couild_take_a_moment_please_be_patient">זה יכול לקחת קצת זמן. היה סבלן, ואנו נודיע על השלמת התהליך. </string>
+  <string name="registration_progress_activity__textsecure_timed_out_while_waiting_for_a_verification_sms_message">נגמר זמן ההמתנה להודעת SMS האימות.</string>
+  <string name="registration_progress_activity__sms_verification_failed">אימות SMS נכשל.</string>
+  <string name="registration_progress_activity__generating_keys">יוצר מפתחות...</string>
   <string name="recipients_panel__to">אל</string>
-  <!--review_identities-->
   <string name="review_identities__you_don_t_currently_have_any_identity_keys_in_your_trust_database">אין לך מפתחות זהויות בבסיס הנתונים של המפתחות שאתה בוטח בהם.</string>
-  <!--verify_identity_activity-->
   <string name="verify_identity_activity__their_identity_they_read">הזהות שלהם (הם קוראים):</string>
   <string name="verify_identity_activity__your_identity_you_read">הזהות שלך (אתה קורא):</string>
-  <!--verify_import_identity_activity-->
   <string name="verify_import_identity_activity__identity_name_n">שם הזהות:/\n</string>
   <string name="verify_import_identity_activity__imported_identity_n">זהות מיובאת:/\n</string>
   <string name="verify_import_identity_activity__verified">אומת!</string>
   <string name="verify_import_identity_activity__compare">השווה</string>
-  <!--verify_keys_activity-->
   <string name="verify_keys_activity__they_read_this">הם קוראים את זה:</string>
   <string name="verify_keys_activity__you_read_this">אתה קורא את זה:</string>
-  <!--AndroidManifest.xml-->
   <string name="AndroidManifest__create_passphrase">צור סיסמה</string>
   <string name="AndroidManifest__enter_passphrase">הכנס סיסמה</string>
   <string name="AndroidManifest__select_contacts">בחר אנשי קשר</string>
@@ -291,11 +336,9 @@
   <string name="AndroidManifest__verify_identity">אמת זהות</string>
   <string name="AndroidManifest__manage_identity_keys">נהל מפתחות זהות</string>
   <string name="AndroidManifest__complete_key_exchange">השלם החלפת מפתח</string>
-  <!--arrays.xml-->
   <string name="arrays__import_export">יבא / יצא</string>
   <string name="arrays__my_identity_key">מפתח הזהות שלי</string>
   <string name="arrays__contact_keys">מפתחות אנשי קשר</string>
-  <!--preferences.xml-->
   <string name="preferences__general">כללי</string>
   <string name="preferences__pref_all_sms_title">עשה שימוש לכל ה-SMS</string>
   <string name="preferences__pref_all_mms_title">השתמש לכל ה-MMS</string>
@@ -330,6 +373,8 @@
   <string name="preferences__pref_led_blink_dialogtitle">בחר תבנית הבהוב ה-LED</string>
   <string name="preferences__select_led_color">בחר צבע LED</string>
   <string name="preferences__sound">קול</string>
+  <string name="preferences__inthread_notifications">הודעות בחוט</string>
+  <string name="preferences__play_inthread_notifications">השמע צליל בעת צפייה בשיחה פעילה.</string>
   <string name="preferences__vibrate">רטט</string>
   <string name="preferences__also_vibrate_when_notified">הפעל רטט בקבלת התראה</string>
   <string name="preferences__minutes">דקות</string>
@@ -347,8 +392,8 @@
   <string name="preferences__advanced">מתקדם</string>
   <string name="preferences__passphrase">סיסמה</string>
   <string name="preferences__advanced_mms_access_point_names">נסיגה ל-MMSC</string>
-  <string name="preferences__enable_fallback_mmsc">אפשר נסיגה ל-MMSC</string>
-  <string name="preferences__use_mmsc_information_configured_here_when_system_apn_information_is_unavailable">השתמש במידע ה-MMSC המוגדר כאן כשמידע ה-APN של המערכת לא זמין.</string>
+  <string name="preferences__enable_manual_mms">אפשר MMS ידני</string>
+  <string name="preferences__override_system_mms_settings">עקוף מערכת הגדרות MMS עם מידע הקודם.</string>
   <string name="preferences__mmsc_url_required">כתובת MMSC (חובה)</string>
   <string name="preferences__mms_proxy_host_optional">שרת Proxy של MMS (לא חובה)</string>
   <string name="preferences__mms_proxy_port_optional">יציאת MMS (לא חובה)</string>
@@ -366,55 +411,40 @@
   <string name="preferences__theme">ערכת נושא</string>
   <string name="preferences__default">ברירת מחדל</string>
   <string name="preferences__language">שפה</string>
-  <!--****************************************-->
-  <!--menus-->
-  <!--****************************************-->
-  <!--contact_selection_list-->
+  <string name="preferences__use_data_channel">שימוש בנתונים</string>
+  <string name="preferences__use_the_data_channel_for_communication_with_other_textsecure_users">השתמש בחיבור נתונים על מנת לתקשר עם משתמשי TextSecure אחרים</string>
   <string name="contact_selection_list__menu_select_all">בחר הכל</string>
   <string name="contact_selection_list__menu_unselect_all">נקה הכל</string>
-  <!--contact_selection-->
   <string name="contact_selection__menu_finished">הושלם</string>
-  <!--conversation_button_context-->
   <string name="conversation_button_context__menu_send_unencrypted">שלח לא מוצפן</string>
-  <!--conversation_callable-->
   <string name="conversation_callable__menu_call">התקשר</string>
-  <!--conversation_context-->
   <string name="conversation_context__menu_message_details">פרטי הודעה</string>
   <string name="conversation_context__menu_copy_text">העתק טקסט</string>
   <string name="conversation_context__menu_delete_message">מחק הודעה</string>
   <string name="conversation_context__menu_forward_message">העבר הודעה</string>
-  <!--conversation_insecure-->
+  <string name="conversation_context__menu_resend_message">שליחה חוזרת של הודעה</string>
   <string name="conversation_insecure__menu_start_secure_session">החל חיבור מאובטח</string>
-  <!--conversation_list_batch-->
   <string name="conversation_list_batch__menu_delete_selected">מחק נבחרים</string>
   <string name="conversation_list_batch__menu_select_all">בחר הכל</string>
-  <!--conversation_list-->
   <string name="conversation_list__menu_search">חפש</string>
-  <!--conversation_secure_verified-->
   <string name="conversation_secure_verified__menu_security">אבטחה</string>
-  <string name="conversation_secure_verified__menu_verify_session">אמת חיבור</string>
+  <string name="conversation_secure_verified__menu_no_identity">אין זהות זמינה</string>
   <string name="conversation_secure_verified__menu_verify_recipient">אמת נמען</string>
   <string name="conversation_secure_verified__menu_abort_secure_session">בטל חיבור מאובטח</string>
-  <!--conversation-->
   <string name="conversation__menu_add_attachment">צרף קובץ</string>
+  <string name="conversation__menu_add_contact_info">הוסף מידע של איש קשר</string>
   <string name="conversation__menu_delete_thread">מחק שרשור</string>
-  <!--conversation_group_options-->
   <string name="convesation_group_options__recipients_list">רשימת נמענים</string>
   <string name="conversation_group_options__delivery">מסירה</string>
   <string name="conversation_group_options__conversation">שיחה</string>
   <string name="conversation_group_options__broadcast">שידור</string>
-  <!--key_scanning-->
   <string name="key_scanning__menu_compare">השווה</string>
   <string name="key_scanning__menu_get_scanned_to_compare">עבור סריקה להשוואה</string>
   <string name="key_scanning__menu_scan_to_compare">סרוק להשוואה</string>
-  <!--text_secure_locked-->
   <string name="text_secure_locked__menu_unlock">פתח</string>
-  <!--text_secure_normal-->
   <string name="text_secure_normal__menu_new_message">הודעה חדשה</string>
   <string name="text_secure_normal__menu_settings">הגדרות</string>
   <string name="text_secure_normal__menu_clear_passphrase">נקה סיסמה</string>
   <string name="text_secure_normal__mark_all_as_read">סמן הכל כנקרא</string>
-  <!--verify_keys-->
   <string name="verify_keys__menu_verified">מאומת</string>
-  <!--EOF-->
 </resources>
