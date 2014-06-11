@@ -64,7 +64,7 @@ public class PhoneNumberFormatter {
       throw new InvalidNumberException("No valid characters found.");
     }
 
-    if (number.charAt(0) == '+')
+    if (localNumber == null || number.charAt(0) == '+')
       return number;
 
     try {
