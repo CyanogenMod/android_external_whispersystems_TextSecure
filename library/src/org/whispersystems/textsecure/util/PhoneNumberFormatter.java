@@ -51,6 +51,17 @@ public class PhoneNumberFormatter {
     }
   }
 
+  public static String formatNumberNational(String number) {
+    try {
+      PhoneNumberUtil util     = PhoneNumberUtil.getInstance();
+      PhoneNumber parsedNumber = util.parse(number, null);
+      return String.valueOf(parsedNumber.getNationalNumber());
+    } catch (NumberParseException e) {
+      Log.w("PhoneNumberFormatter", e);
+      return number;
+    }
+   }
+
   public static String formatNumber(String number, String localNumber)
       throws InvalidNumberException
   {
