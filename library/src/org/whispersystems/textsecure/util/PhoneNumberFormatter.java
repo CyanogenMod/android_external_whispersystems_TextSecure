@@ -18,7 +18,14 @@ import java.util.Locale;
 public class PhoneNumberFormatter {
 
   public static boolean isValidNumber(String number) {
-    return number.matches("^\\+[0-9]{10,}");
+    try {
+      PhoneNumberUtil util     = PhoneNumberUtil.getInstance();
+      PhoneNumber parsedNumber = util.parse(number, null);
+      return util.isValidNumber(parsedNumber);
+    } catch (NumberParseException e) {
+      Log.w("PhoneNumberFormatter", e);
+      return false;
+    }
   }
 
   private static String impreciseFormatNumber(String number, String localNumber)
