@@ -16,8 +16,8 @@ LOCAL_SDK_VERSION := 8
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 LOCAL_STATIC_JAVA_LIBRARIES := libphonenumbergoogle thoughtcrimegson spongycastle-light-jdk15on protobuf-java-2.4.1
 
-LOCAL_STATIC_LIBRARIES := libcurve25519-donna libcurve25519
-LOCAL_ADDITIONAL_DEPENDENCIES += libcurve25519
+LOCAL_STATIC_LIBRARIES := libcurve25519-donna-old libcurve25519-old
+LOCAL_ADDITIONAL_DEPENDENCIES += libcurve25519-old
 
 include $(BUILD_STATIC_JAVA_LIBRARY)
 
