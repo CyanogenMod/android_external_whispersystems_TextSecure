@@ -24,7 +24,7 @@ import java.security.SecureRandom;
 public class Curve25519 {
 
   static {
-    System.loadLibrary("curve25519");
+    System.loadLibrary("curve25519-old");
 
     try {
       random = SecureRandom.getInstance("SHA1PRNG");
